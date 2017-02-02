@@ -1,0 +1,83 @@
+body {
+    font-family: Roboto,sans-serif;
+    font-weight: 300;
+    color: #12293a;
+    background: url("../img/comms_bg_grey.svg") top right no-repeat;
+    text-align: center;
+}
+#header {
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#main_content {
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+h1 {
+    font-family: Gafata,serif,monospace;
+    color: #12293a;
+    font-size: 250%;
+    font-weight: 400;
+}
+h2 {
+    font-family: Gafata,serif,monospace;
+    color: #12293a;
+    font-size: 200%;
+    font-weight: 400;
+}
+
+#footer {
+    background: url("../img/comms_footer_bg.svg") top left no-repeat;
+    background-color: #e4e4e4;
+    padding-top: 2em;
+}
+
+#footer_content {
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 2em;
+}
+
+#footer_content a {
+    color: #616161;
+    padding-bottom: 0.125em;
+    border-bottom: 1px solid currentcolor;
+    text-decoration: none;
+}
+
+
+/* linked.data.gov.au additions */
+div.table {
+    margin: 20px;
+    text-align: center;
+
+}
+
+span.caption {
+    font-size: small;
+}
+
+table.lined {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: solid 2px black;
+    text-align: left;
+
+    table-layout:fixed;
+    width: 800px;
+}
+
+table.lined td,
+table.lined th {
+    border: solid 1px black;
+    padding: 5px;
+
+    overflow: hidden;
+    word-wrap: break-word;
+    max-width:150px;
+}
