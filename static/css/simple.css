@@ -30,6 +30,10 @@ h2 {
     font-weight: 400;
 }
 
+p, li {
+    line-height: 1.5em;
+}
+
 #footer {
     background: url("../img/comms_footer_bg.svg") top left no-repeat;
     background-color: #e4e4e4;
@@ -48,6 +52,10 @@ h2 {
     padding-bottom: 0.125em;
     border-bottom: 1px solid currentcolor;
     text-decoration: none;
+}
+
+#license {
+    font-size: small;
 }
 
 
