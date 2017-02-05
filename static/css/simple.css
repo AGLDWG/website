@@ -2,7 +2,7 @@ body {
     font-family: Roboto,sans-serif;
     font-weight: 300;
     color: #12293a;
-    background: url("../img/comms_bg_grey.svg") top right no-repeat;
+    background: url("/static/img/comms_bg_grey.svg") top right no-repeat;
     text-align: center;
 }
 #header {
@@ -35,7 +35,7 @@ p, li {
 }
 
 #footer {
-    background: url("../img/comms_footer_bg.svg") top left no-repeat;
+    background: url("/static/img/comms_footer_bg.svg") top left no-repeat;
     background-color: #e4e4e4;
     padding-top: 2em;
 }
