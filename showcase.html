@@ -1,149 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>AGLDWG</title>
-	<meta charset="utf-8" />
-    <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
-	<meta name="dcterms.format" content="text/html" />
-	<meta name="dcterms.language" content="en" />
-	<meta name="dcterms.type" content="Text" />
-	<meta name="dcterms.publisher" content="Department of Communications" />
-	<meta name="dcterms.creator" content="Nicholas Car" />
-	<meta name="dcterms.title" content="Australian Government Linked Data Working Group home page" />
-	<meta name="dcterms.date" content="2017-06-06T16:30+10:00" />
-	<meta name="dcterms.modified" content="2017-06-06T16:30+10:00" />
-	<meta name="description" content="Contact page" />
-	<meta name="generator" content="Lovingly coded by hand" />
+    <head>
+        <title>AGLDWG</title>
+        <meta charset="utf-8" />
+        <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+        <meta name="dcterms.format" content="text/html" />
+        <meta name="dcterms.language" content="en" />
+        <meta name="dcterms.type" content="Text" />
+        <meta name="dcterms.publisher" content="Department of Communications" />
+        <meta name="dcterms.creator" content="Nicholas Car" />
+        <meta name="dcterms.title" content="Australian Government Linked Data Working Group home page" />
+        <meta name="dcterms.date" content="2017-06-06T16:30+10:00" />
+        <meta name="dcterms.modified" content="2017-06-06T16:30+10:00" />
+        <meta name="description" content="Contact page" />
+        <meta name="generator" content="Lovingly coded by hand" />
 
-    <link type="text/css" rel="stylesheet" href="static/css/simple.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="static/css/simple.css" media="all" />
 
-    <style>
-        table.layout tr {
-            vertical-align: top;
-        }
+        <script src="static/js/jquery-3.2.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                //select all the a tag with name equal to modal
+                $('a[name=modal]').click(function(e) {
+                    //Cancel the link behavior
+                    e.preventDefault();
 
-        td {
-            vertical-align: top;
-            width: 50%;
-        }
+                    //Get the A tag
+                    var id = $(this).attr('href');
 
-        .blue {
-            vertical-align: top;
-            background-color: rgb(18, 41, 58);
-            color: white;
-            padding: 5px;
-        }
-        .blue a {
-            color: lightblue;
-        }
+                    //Get the screen height and width
+                    var maskHeight = $(document).height();
+                    var maskWidth = $(window).width();
 
-        .white {
-            vertical-align: top;
-            background-color: white;
-            color: rgb(18, 41, 58);
-            padding: 5px;
-        }
-        .white a {
-            color: blue;
-        }
-    </style>
-</head>
-<body>
-	<header id="header">
-        <table style="width:900px">
-            <tr>
-                <td id="banner"><!--<img src="../static/img/aus-gov-logo-stacked-black.jpg" title="Australian Government Coat of Arms" style="height:100px">--></td>
-                <td style="text-align:right" id="navigation">
-                    <a href="/showcase.html">Linked Data Showcase</a> |
-                    <a href="/index.html">Home</a> |
-                    <a href="/events.html">Events</a> |
-                    <a href="/groups.html">Groups</a> |
-                    <a href="/contact.html">Contact</a>
-                </td>
-            </tr>
-        </table>
-	</header>
-	<div id="main">
-        <h1>Australian Government Linked Data Working Group</h1>
-        <h2>Showcase</h2>
-        <p>The AGLDWG has a role to play in communicating the benefits and technical aspects of Linked Data across government. So, here are a list of Linked Data systems and datasets already implemented by Australian government agencies as well as a few foundational Linked Data introductory resources.</p>
-        <p>Below are listed some:</p>
-        <ul>
-            <li><strong>Vocabularies</strong> - structured lists with definitional content</li>
-            <li><strong>Systems</strong> - that deliver Linked Data content and support functions</li>
-            <li><strong>Datasets</strong> - of Linked Data, data</li>
-            <li><strong>Ontologies</strong> - structured concepts and categories in a subject area or domain</li>
-        </ul>
-        <table class=layout">
-            <tr>
-                <td>
-                    <div class="blue">
+                    //Set heigth and width to mask to fill up the whole screen
+                    $('#mask').css({'width':maskWidth,'height':maskHeight});
+                    //transition effect
+                    $('#mask').fadeIn(1000);
+                    $('#mask').fadeTo("slow",0.8);
+
+                    //Get the window height and width
+                    var winH = $(window).height();
+                    var winW = $(window).width();
+
+                    //Set the popup window to center
+                    $(id).css('top',  winH/2-$(id).height()/2);
+                    $(id).css('left', winW/2-$(id).width()/2);
+
+                    //transition effect
+                    $(id).fadeIn(2000);
+                });
+
+                //if close button is clicked
+                $('.window .close').click(function (e) {
+                    //Cancel the link behavior
+                    e.preventDefault();
+
+                    $('#mask').hide();
+                    $('.window').hide();
+                });
+
+                //if mask is clicked
+                $('#mask').click(function () {
+                    $(this).hide();
+                    $('.window').hide();
+                });
+
+                $(window).resize(function () {
+                    var box = $('.window');
+
+                    //Get the screen height and width
+                    var maskHeight = $(document).height();
+                    var maskWidth = $(window).width();
+
+                    //Set height and width to mask to fill up the whole screen
+                    $('#mask').css({'width':maskWidth,'height':maskHeight});
+
+                    //Get the window height and width
+                    var winH = $(window).height();
+                    var winW = $(window).width();
+
+                    //Set the popup window to center
+                    box.css('top',  winH/2 - box.height()/2);
+                    box.css('left', winW/2 - box.width()/2);
+                });
+            });
+        </script>
+
+        <style>
+            #mask {
+                position:   absolute;
+                left:       0;
+                top:        0;
+                z-index:    9000;
+                background-color:#000;
+                display:    none;
+            }
+
+            .window {
+                position:   fixed;
+                left:       0;
+                top:        0;
+                width:      600px;
+                min-height:     200px;
+                display:    none;
+                z-index:    9999;
+                padding:    20px;
+                background-color:#ffffff;
+            }
+
+            .window-links {
+                text-align: center;
+                font-size: smaller;
+            }
+
+
+
+            table.layout tr {
+                vertical-align: top;
+            }
+
+            td {
+                vertical-align: top;
+                width: 50%;
+            }
+
+            .blue {
+                vertical-align: top;
+                background-color: rgb(18, 41, 58);
+                color: white;
+                padding: 5px;
+            }
+            .blue a {
+                color: lightblue;
+            }
+
+            .white {
+                vertical-align: top;
+                background-color: white;
+                color: rgb(18, 41, 58);
+                padding: 5px;
+            }
+            .white a {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <table style="width:900px">
+                <tr>
+                    <td id="banner"><!--<img src="../static/img/aus-gov-logo-stacked-black.jpg" title="Australian Government Coat of Arms" style="height:100px">--></td>
+                    <td style="text-align:right" id="navigation">
+                        <a href="/showcase.html">Linked Data Showcase</a> |
+                        <a href="/index.html">Home</a> |
+                        <a href="/events.html">Events</a> |
+                        <a href="/groups.html">Groups</a> |
+                        <a href="/contact.html">Contact</a>
+                    </td>
+                </tr>
+            </table>
+        </header>
+        <div id="main">
+            <h1>Australian Government Linked Data Working Group</h1>
+            <h2>Showcase</h2>
+            <p>The AGLDWG has a role to play in communicating the benefits and technical aspects of Linked Data across government. So, here are a list of Linked Data systems and datasets already implemented by Australian government agencies as well as a few foundational Linked Data introductory resources.</p>
+            <p>Below are listed some:</p>
+            <ul>
+                <li><strong>Vocabularies</strong> - structured lists with definitional content</li>
+                <li><strong>Systems</strong> - that deliver Linked Data content and support functions</li>
+                <li><strong>Datasets</strong> - of Linked Data, data</li>
+                <li><strong>Ontologies</strong> - structured concepts and categories in a subject area or domain</li>
+            </ul>
+            <p>Click on the examples of each type of thing below to see a pop-up description of each with links to the original online.</p>
+            <table class="layout">
+                <tr>
+                    <td class="blue">
                         <h3>Vocabularies</h3>
                         <p>Much of linked Data relies on <em>definitions</em>, indeed the <a href="https://en.wikipedia.org/wiki/Semantic_Web">Semantic Web</a>, which Linked Data is helping build, is predicated on strong definitions for web resources. Vocabularies, standardised in their structure and delivery according to Linked Data and Semantic Web principles provide online, look-up-able definitions for things which can be used much more easiy and powerfully than older vocabulary tools such as (paper) dictionaries, tables on web pages or XML code lists.</p>
                         <p>Here are two Linked Data vocabulary systems currently in use in the Australian Federal government:</p>
-                    </div>
-                    <div class="white">
-                        <h4>Vocabulary: Australian Governments' Interactive Functions Thesaurus (AGIFT)</h4>
-                        <p style="text-align:center;"><a href="https://data.naa.gov.au/def/agift.html"><img src="static/img/agift.jpg" alt="AGIFT website screenshot" style="width:460px;" /></a></p>
-                        <p>AGIFT is a vocabulary delivered by the <a href="http://www.naa.gov.au/">National Archives of Australia</a> that lists functions performed by government. The web page delivering AGIFT is a system that allows for both human and machine-readable versions of the vocabulary formalised using the <a href="https://www.w3.org/TR/skos-primer/">SKOS</a> ontology.</p>
-                        <p>The system used is the commercial <a href="https://www.poolparty.biz/">PoolParty</a> product.</p>
-                    </div>
-                    <div class="blue">
-                        <h4>Vocabulary: ANDS' Research Vocabularies Australia</h4>
-                        <p>The <a href="http://www.ands.org.au">Australian National Data Service</a> (ANDS) provides a vocabulary hosting service for Australian government and academic users</p>
-                        <p style="text-align:center;"><a href="https://data.naa.gov.au/def/agift.html"><img src="static/img/rva.png" alt="ANDS' Research Vocabularies Australia portal" style="width:460px;" /></a></p>
-                        <p>A search for the word 'rock' yields both individual terms ("Concepts") within vocabularies about rocks and whole vocabularies about them.</p>
-                        <p>Geoscience Australia hosts a series of vocabularies on the RVA system both because it saves on-site hosting cost and effort and also because it makes GA's vocabularies more discoverable.</p>
                         <ul>
-                            <li><a href="https://vocabs.ands.org.au/search/#!/?p=1&publisher=Geoscience%20Australia">GA's vocabs in the RVA portal</a></li>
+                            <li><a href="#dialog-1" name="modal">Australian Governments' Interactive Functions Thesaurus (AGIFT)</a></li>
+                            <li><a href="#dialog-2" name="modal">ANDS' Research Vocabularies Australia</a></li>
                         </ul>
-                    </div>
-                    <div class="white">
-                        <h3>Datasets</h3>
-                        <p><em>Coming!</em> We'll soon put here a cache of all of the Australian Linked Data that we can find with a Linked Data Spider (web crawler).</p>
-                    </div>
-                </td>
-                <td>
-                    <div class="white">
-                    <h3>Systems</h3>
+                    </td>
+                    <td class="white">
+                        <h3>Systems</h3>
                         <p>There's many different systems that can claime to be "Linked Data Systems": really anything that helps supply Linked Data. Some of them are dedicated to Linked Data, such as RDF Triplestores and Linked Data API, others facilitate Linked Data along with other functions, such as general website content managment.</p>
                         <p>Below are a few examples of Linked Data systems currently in operation within Australian government.</p>
-                    </div>
-                    <div class="blue">
-                        <h4>System: AGLDWG's Persistent ID Service</h4>
-                        <p>One of the core tasks of Linked Data is to uniquely and usefully identify resources - information items - on the web. This is usually done with <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URI</a>s which are just a slight extension to web page URLs alowing for non-web page things to be linked to, e.g. vocabulary terms in machine-to-machine data formats.</p>
-                        <p>The Linked Data WG uses an advanced web proxy called the <a href="https://www.seegrid.csiro.au/wiki/Siss/PIDService">PID Service</a> that allows for fine-grained and semi-non-technical management of long-lived URIs or Persistent Identifiers (PIDs). We use a PID Service located within the data.gov.au domain to manage PIDs made with a series of subdomains, such as <code>environment.data.gov.au</code>, <code>reference.data.gov.au</code>, <code>governance.data.gov.au</code> and others that accord with the AGLDWG's <a href="https://github.com/AGLDWG/TR/blob/master/guidelines/URI-Guidelines-for-publishing-linked-datasets-on-data.gov.au-latest.md">URI Guidelines</a> which indicates how to supply PIDs for use across government (tip: use PIDs associaeted with government <em>functions</em>, not organisations, as functions don't change, organisations do.</p>
-                        <p style="text-align:center;"><img src="static/img/pid-svc.png" alt="Screenshot of the environment.data.gov.au PID Service" style="width:460px;" /></p>
-                        <p>Agencies with datasets in the <em>environment</em> domain of government functions, such as the <a href="http://www.bom.gov.au">Bureau of Meteolrology</a>, can put Linked Data datasets online and use the proxying functions of this PID Service to create persistent identifiers for the datasets and their subcomponents which resolve to them, regardless of where and how they are implemented under the hood.</p>
-                        <p>The PID URI <a href="http://environment.data.gov.au/def/op">http://environment.data.gov.au/def/op</a> proxies to CSIRO "Observable Properties" ontology which is a Linked Data resource about environmental properties. It's hosted on a CSIRO system but the PID makes it accessible via a nice, ordered, URI that won't change, even if CSIRO changes things (it can be redirected).</p>
-                    </div>
-                    <div class="white">
-                        <h4>System: GA's Samples API</h4>
-                        <p style="text-align:center;"><a href="http://pid.geoscience.gov.au/sample/AU239"><img src="static/img/sample-AU239.png" alt="GA's Samples Catalogue AU239" style="width:460px;" /></a></p>
-                        <p><a href="http://www.ga.gov.au">Geoscience Australia</a>'s web API delivering metadata for physical samples stored in it's repositories. Multiple 'views' and 'formats' of samples' metadata is available, including the <a href="http://dublincore.org/schemas/rdfs/">Dublin Core Metadata Initiative represented in RDF</a> general purpose metadata, and more specialised metadata according to more sample-specialised schema, such as the W3C's <a href="https://www.w3.org/2015/spatial/wiki/Main_Page">Spatial Data on the Web</a>'s <a href="https://www.w3.org/TR/vocab-ssn/">SOSA ontology</a>.</p>
                         <ul>
-                            <li>Sample AU239's landing page (HTML): <a href="http://pid.geoscience.gov.au/sample/AU239">http://pid.geoscience.gov.au/sample/AU239</a></li>
-                            <li>Sample AU239's metadata in Dublin Core (HTML): <a href="http://pid.geoscience.gov.au/sample/AU239?_view=dc">http://pid.geoscience.gov.au/sample/AU239?_view=dc</a></li>
-                            <li>Sample AU239's metadata in Dublin Core (RDF): <a href="http://pid.geoscience.gov.au/sample/AU239?_view=dc&_format=text/turtle">http://pid.geoscience.gov.au/sample/AU239?_view=dc&_format=text/turtle</a></li>
-                            <li>Sample AU239's metadata in SOSA (RDF): <a href="http://pid.geoscience.gov.au/sample/AU239?_view=sosa&_format=text/turtle">http://pid.geoscience.gov.au/sample/AU239?_view=sosa&_format=text/turtle</a></li>
+                            <li><a href="#dialog-3" name="modal">AGLDWG's Persistent ID Service</a></li>
+                            <li><a href="#dialog-4" name="modal">Geoscience Australia's Samples API</a></li>
                         </ul>
-                        <p>The full catalogue ("Register" in Linked Data-speak) of all samples is available at <a href="http://pid.geoscience.gov.au/sample/">http://pid.geoscience.gov.au/sample/</a> and W3C <a href="https://www.w3.org/TR/dwbp/">Data on the Web Best Practices</a> are followed to allow for navigating the 2M samples.</p>
-                    </div>
-                    <div class="blue">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white">
+                        <h3>Datasets</h3>
+                        <p><em>Coming!</em> We'll soon put here a cache of all of the Australian Linked Data that we can find with a Linked Data Spider (web crawler).</p>
+                    </td>
+                    <td class="blue">
                         <h3>Ontologies</h3>
                         <p>Ontologies are data models that express knowledge within a domain and are often more complex than vocabularies although vocabularies themselves <em>are</em> a form of ontology.</p>
-                        <p>A great number of foundational, or fundamental, ontologies have been produced to cater for such broadly required concepts as time <a href="https://www.w3.org/TR/owl-time/">(TIME ontology)</a> and simple authoring information <a href="http://dublincore.org/documents/dc-rdf/">Dublin Core</a> and tracing changes to things over time <a href="https://www.w3.org/TR/prov-o/">(PROV-O, the provenance ontology)</a>
-                        this Linked Data WG has produced an ontology to define properties for datasets within the <a href="http://data.gov.au">data.gov.au</a> catalogue.</p>
-                    </div>
-                    <div class="white">
-                        <h4>Ontology: the Dataset Ontology</h4>
-                        <a href="http://data.gov.au/dataset/data-gov-au-dataset-ontology"><img src="static/img/dataset-ont.png" alt="The Dataset Ontology Landing Page in data.gov.au" style="width:470px;" /></a>
-                        <p>While there are many ontologies that deal with datasets, such as the simple, well-known and widely-used <a href="https://www.w3.org/TR/vocab-dcat/">DCAT</a>, the purpose of this ontology is to cover aspects of organisational custodianship and governance using formulations common in many of the more rigorous ontologies such as <a href="https://www.w3.org/TR/vocab-org/">ORG</a>, rather than DACt's simplistic constructs.</p>
-                        <p>This ontology has the expressive power of the ISO's <a href="https://www.iso.org/standard/53798.html">19115 -- metadata for geographic information standard</a> but, in using Linked Data and Semantic Web tools rather than the older XML, it is far more powerful.</p>
-                    </div>
-                </td>
-            </tr>
-        </table>
-	</div>
-</body>
+                        <p>A great number of foundational, or fundamental, ontologies have been produced to cater for such broadly required concepts as time <a href="https://www.w3.org/TR/owl-time/">(TIME ontology)</a> and simple authoring information <a href="http://dublincore.org/documents/dc-rdf/">Dublin Core</a> and tracing changes to things over time <a href="https://www.w3.org/TR/prov-o/">(PROV-O, the provenance ontology)</a> this Linked Data WG has produced an ontology to define properties for datasets within the <a href="http://data.gov.au">data.gov.au</a> catalogue.</p>
+                        <ul>
+                            <li><a href="#dialog-5" name="modal">The Dataset Ontology</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div> <!-- main -->
+
+        <!-- pop-up boxes -->
+        <div class="window" id="dialog-1">
+            <div class="window-links"><a href="#" class="close">Close</a></div>
+            <h3>Australian Governments' Interactive Functions Thesaurus (AGIFT)</h3>
+            <p style="text-align:center;"><a href="https://data.naa.gov.au/def/agift.html"><img src="static/img/agift.jpg" alt="AGIFT website screenshot" style="width:460px;" /></a></p>
+            <p>AGIFT is a vocabulary delivered by the <a href="http://www.naa.gov.au/">National Archives of Australia</a> that lists functions performed by government. The web page delivering AGIFT is a system that allows for both human and machine-readable versions of the vocabulary formalised using the <a href="https://www.w3.org/TR/skos-primer/">SKOS</a> ontology.</p>
+            <p>The system used is the commercial <a href="https://www.poolparty.biz/">PoolParty</a> product.</p>
+        </div>
+
+        <div class="window" id="dialog-2">
+            <div class="window-links"><a href="#" class="close">Close</a></div>
+            <h3>ANDS' Research Vocabularies Australia</h3>
+            <p>The <a href="http://www.ands.org.au">Australian National Data Service</a> (ANDS) provides a vocabulary hosting service for Australian government and academic users</p>
+            <p style="text-align:center;"><a href="https://data.naa.gov.au/def/agift.html"><img src="static/img/rva.png" alt="ANDS' Research Vocabularies Australia portal" style="width:460px;" /></a></p>
+            <p>A search for the word 'rock' yields both individual terms ("Concepts") within vocabularies about rocks and whole vocabularies about them.</p>
+            <p>Geoscience Australia hosts a series of vocabularies on the RVA system both because it saves on-site hosting cost and effort and also because it makes GA's vocabularies more discoverable.</p>
+            <ul>
+                <li><a href="https://vocabs.ands.org.au/search/#!/?p=1&publisher=Geoscience%20Australia">GA's vocabs in the RVA portal</a></li>
+            </ul>
+        </div>
+
+        <div class="window" id="dialog-3">
+            <div class="window-links"><a href="#" class="close">Close</a></div>
+            <h3>AGLDWG's Persistent ID Service</h3>
+            <p>One of the core tasks of Linked Data is to uniquely and usefully identify resources - information items - on the web. This is usually done with <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URI</a>s which are just a slight extension to web page URLs alowing for non-web page things to be linked to, e.g. vocabulary terms in machine-to-machine data formats.</p>
+            <p>The Linked Data WG uses an advanced web proxy called the <a href="https://www.seegrid.csiro.au/wiki/Siss/PIDService">PID Service</a> that allows for fine-grained and semi-non-technical management of long-lived URIs or Persistent Identifiers (PIDs). We use a PID Service located within the data.gov.au domain to manage PIDs made with a series of subdomains, such as <code>environment.data.gov.au</code>, <code>reference.data.gov.au</code>, <code>governance.data.gov.au</code> and others that accord with the AGLDWG's <a href="https://github.com/AGLDWG/TR/blob/master/guidelines/URI-Guidelines-for-publishing-linked-datasets-on-data.gov.au-latest.md">URI Guidelines</a> which indicates how to supply PIDs for use across government (tip: use PIDs associaeted with government <em>functions</em>, not organisations, as functions don't change, organisations do.</p>
+            <p style="text-align:center;"><img src="static/img/pid-svc.png" alt="Screenshot of the environment.data.gov.au PID Service" style="width:460px;" /></p>
+            <p>Agencies with datasets in the <em>environment</em> domain of government functions, such as the <a href="http://www.bom.gov.au">Bureau of Meteolrology</a>, can put Linked Data datasets online and use the proxying functions of this PID Service to create persistent identifiers for the datasets and their subcomponents which resolve to them, regardless of where and how they are implemented under the hood.</p>
+            <p>The PID URI <a href="http://environment.data.gov.au/def/op">http://environment.data.gov.au/def/op</a> proxies to CSIRO "Observable Properties" ontology which is a Linked Data resource about environmental properties. It's hosted on a CSIRO system but the PID makes it accessible via a nice, ordered, URI that won't change, even if CSIRO changes things (it can be redirected).</p>
+        </div>
+
+        <div class="window" id="dialog-4">
+            <div class="window-links"><a href="#" class="close">Close</a></div>
+            <h3>Geoscience Australia's Samples API</h3>
+            <p style="text-align:center;"><a href="http://pid.geoscience.gov.au/sample/AU239"><img src="static/img/sample-AU239.png" alt="GA's Samples Catalogue AU239" style="width:460px;" /></a></p>
+            <p><a href="http://www.ga.gov.au">Geoscience Australia</a>'s web API delivering metadata for physical samples stored in it's repositories. Multiple 'views' and 'formats' of samples' metadata is available, including the <a href="http://dublincore.org/schemas/rdfs/">Dublin Core Metadata Initiative represented in RDF</a> general purpose metadata, and more specialised metadata according to more sample-specialised schema, such as the W3C's <a href="https://www.w3.org/2015/spatial/wiki/Main_Page">Spatial Data on the Web</a>'s <a href="https://www.w3.org/TR/vocab-ssn/">SOSA ontology</a>.</p>
+            <ul>
+                <li>Sample AU239's landing page (HTML): <a href="http://pid.geoscience.gov.au/sample/AU239">http://pid.geoscience.gov.au/sample/AU239</a></li>
+                <li>Sample AU239's metadata in Dublin Core (HTML): <a href="http://pid.geoscience.gov.au/sample/AU239?_view=dc">http://pid.geoscience.gov.au/sample/AU239?_view=dc</a></li>
+                <li>Sample AU239's metadata in Dublin Core (RDF): <a href="http://pid.geoscience.gov.au/sample/AU239?_view=dc&_format=text/turtle">http://pid.geoscience.gov.au/sample/AU239?_view=dc&_format=text/turtle</a></li>
+                <li>Sample AU239's metadata in SOSA (RDF): <a href="http://pid.geoscience.gov.au/sample/AU239?_view=sosa&_format=text/turtle">http://pid.geoscience.gov.au/sample/AU239?_view=sosa&_format=text/turtle</a></li>
+            </ul>
+            <p>The full catalogue ("Register" in Linked Data-speak) of all samples is available at <a href="http://pid.geoscience.gov.au/sample/">http://pid.geoscience.gov.au/sample/</a> and W3C <a href="https://www.w3.org/TR/dwbp/">Data on the Web Best Practices</a> are followed to allow for navigating the 2M samples.</p>
+        </div>
+
+        <div class="window" id="dialog-5">
+            <div class="window-links"><a href="#" class="close">Close</a></div>
+            <h3>The Dataset Ontology</h3>
+            <p  style="text-align:center;"><a href="http://data.gov.au/dataset/data-gov-au-dataset-ontology"><img src="static/img/dataset-ont.png" alt="The Dataset Ontology Landing Page in data.gov.au" style="width:470px;" /></a></p>
+            <p>While there are many ontologies that deal with datasets, such as the simple, well-known and widely-used <a href="https://www.w3.org/TR/vocab-dcat/">DCAT</a>, the purpose of this ontology is to cover aspects of organisational custodianship and governance using formulations common in many of the more rigorous ontologies such as <a href="https://www.w3.org/TR/vocab-org/">ORG</a>, rather than DACt's simplistic constructs.</p>
+            <p>This ontology has the expressive power of the ISO's <a href="https://www.iso.org/standard/53798.html">19115 -- metadata for geographic information standard</a> but, in using Linked Data and Semantic Web tools rather than the older XML, it is far more powerful.</p>
+        </div>
+        <!-- Mask to cover the whole screen -->
+        <div id="mask"></div>
+    </body>
 </html>
