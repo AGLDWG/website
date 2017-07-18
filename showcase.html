@@ -100,20 +100,19 @@
                 position:   fixed;
                 left:       0;
                 top:        0;
-                width:      600px;
-                min-height:     200px;
+                width:      900px;
+                min-height: 200px;
                 display:    none;
                 z-index:    9999;
                 padding:    20px;
                 background-color:#ffffff;
+                overflow-y: scroll;
             }
 
             .window-links {
                 text-align: center;
                 font-size: smaller;
             }
-
-
 
             table.layout tr {
                 vertical-align: top;
@@ -185,7 +184,7 @@
                     </td>
                     <td class="white">
                         <h3>Systems</h3>
-                        <p>There's many different systems that can claime to be "Linked Data Systems": really anything that helps supply Linked Data. Some of them are dedicated to Linked Data, such as RDF Triplestores and Linked Data API, others facilitate Linked Data along with other functions, such as general website content managment.</p>
+                        <p>There's many different systems that can claim to be "Linked Data Systems": really anything that helps supply Linked Data. Some of them are dedicated to Linked Data, such as RDF Triplestores and Linked Data API, others facilitate Linked Data along with other functions, such as general website content managment.</p>
                         <p>Below are a few examples of Linked Data systems currently in operation within Australian government.</p>
                         <ul>
                             <li><a href="#dialog-3" name="modal">AGLDWG's Persistent ID Service</a></li>
@@ -196,10 +195,12 @@
                 <tr>
                     <td class="white">
                         <h3>Datasets</h3>
-                        <p>Here are some examples of Linked Data datasets</p>
+                        <p>Here are some examples of Linked Data datasets. Yes, the list is small now but we will be adding to it very soon!</p>
                         <ul>
                             <li><a href="#dialog-6" name="modal">Australian Linked Data Cache</a></li>
                             <li><a href="#dialog-7" name="modal">ACORN SAT</a></li>
+                            <li><a href="#dialog-8" name="modal">FSDF's Location Information Knowledge Platform</a></li>
+                            <li>directory.gov.au in RDF - <em>coming soon!</em></li>
                         </ul>
                     </td>
                     <td class="blue">
@@ -208,6 +209,8 @@
                         <p>A great number of foundational, or fundamental, ontologies have been produced to cater for such broadly required concepts as time <a href="https://www.w3.org/TR/owl-time/">(TIME ontology)</a> and simple authoring information <a href="http://dublincore.org/documents/dc-rdf/">Dublin Core</a> and tracing changes to things over time <a href="https://www.w3.org/TR/prov-o/">(PROV-O, the provenance ontology)</a> this Linked Data WG has produced an ontology to define properties for datasets within the <a href="http://data.gov.au">data.gov.au</a> catalogue.</p>
                         <ul>
                             <li><a href="#dialog-5" name="modal">The Dataset Ontology</a></li>
+                            <li><a href="#dialog-9" name="modal">GA's Public Data ontology</a></li>
+                            <li><a href="#dialog-10" name="modal">FSDF's LINK ontology</a></li>
                         </ul>
                     </td>
                 </tr>
@@ -225,11 +228,10 @@
 
         <div class="window" id="dialog-2">
             <div class="window-links"><a href="#" class="close">Close</a></div>
-            <h3>ANDS' Research Vocabularies Australia</h3>
-            <p>The <a href="http://www.ands.org.au">Australian National Data Service</a> (ANDS) provides a vocabulary hosting service for Australian government and academic users</p>
+            <h3>Australian National Data Service' Research Vocabularies Australia</h3>
+            <p>The <a href="http://www.ands.org.au">ANDS</a> provides a vocabulary hosting service for Australian government and academic users</p>
             <p style="text-align:center;"><a href="https://data.naa.gov.au/def/agift.html"><img src="static/img/rva.png" alt="ANDS' Research Vocabularies Australia portal" style="width:460px;" /></a></p>
             <p>A search for the word 'rock' yields both individual terms ("Concepts") within vocabularies about rocks and whole vocabularies about them.</p>
-            <p>Geoscience Australia hosts a series of vocabularies on the RVA system both because it saves on-site hosting cost and effort and also because it makes GA's vocabularies more discoverable.</p>
             <ul>
                 <li><a href="https://vocabs.ands.org.au/search/#!/?p=1&publisher=Geoscience%20Australia">GA's vocabs in the RVA portal</a></li>
             </ul>
@@ -239,8 +241,14 @@
             <div class="window-links"><a href="#" class="close">Close</a></div>
             <h3>AGLDWG's Persistent ID Service</h3>
             <p>One of the core tasks of Linked Data is to uniquely and usefully identify resources - information items - on the web. This is usually done with <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URI</a>s which are just a slight extension to web page URLs alowing for non-web page things to be linked to, e.g. vocabulary terms in machine-to-machine data formats.</p>
-            <p>The Linked Data WG uses an advanced web proxy called the <a href="https://www.seegrid.csiro.au/wiki/Siss/PIDService">PID Service</a> that allows for fine-grained and semi-non-technical management of long-lived URIs or Persistent Identifiers (PIDs). We use a PID Service located within the data.gov.au domain to manage PIDs made with a series of subdomains, such as <code>environment.data.gov.au</code>, <code>reference.data.gov.au</code>, <code>governance.data.gov.au</code> and others that accord with the AGLDWG's <a href="https://github.com/AGLDWG/TR/blob/master/guidelines/URI-Guidelines-for-publishing-linked-datasets-on-data.gov.au-latest.md">URI Guidelines</a> which indicates how to supply PIDs for use across government (tip: use PIDs associaeted with government <em>functions</em>, not organisations, as functions don't change, organisations do.</p>
-            <p style="text-align:center;"><img src="static/img/pid-svc.png" alt="Screenshot of the environment.data.gov.au PID Service" style="width:460px;" /></p>
+                <table>
+                    <tr>
+                        <td>
+                            <p>The Linked Data WG uses an advanced web proxy, the <a href="https://www.seegrid.csiro.au/wiki/Siss/PIDService">PID Service</a> that allows for fine-grained and semi-non-technical management of long-lived URIs. We use a PID Service within the data.gov.au domain to manage PIDs made with a series of subdomains, such as <code>environment.data.gov.au</code>, <code>reference.data.gov.au</code> and others that accord with the AGLDWG's <a href="https://github.com/AGLDWG/TR/blob/master/guidelines/URI-Guidelines-for-publishing-linked-datasets-on-data.gov.au-latest.md">URI Guidelines</a> which indicates how to supply PIDs for use across government (tip: use PIDs associaeted with government <em>functions</em>, not organisations, as functions don't change, organisations do.</p>
+                        </td>
+                        <td><img src="static/img/pid-svc.png" alt="Screenshot of the environment.data.gov.au PID Service" style="width:400px;" /></td>
+                    </tr>
+                </table>
             <p>Agencies with datasets in the <em>environment</em> domain of government functions, such as the <a href="http://www.bom.gov.au">Bureau of Meteolrology</a>, can put Linked Data datasets online and use the proxying functions of this PID Service to create persistent identifiers for the datasets and their subcomponents which resolve to them, regardless of where and how they are implemented under the hood.</p>
             <p>The PID URI <a href="http://environment.data.gov.au/def/op">http://environment.data.gov.au/def/op</a> proxies to CSIRO "Observable Properties" ontology which is a Linked Data resource about environmental properties. It's hosted on a CSIRO system but the PID makes it accessible via a nice, ordered, URI that won't change, even if CSIRO changes things (it can be redirected).</p>
         </div>
@@ -248,23 +256,39 @@
         <div class="window" id="dialog-4">
             <div class="window-links"><a href="#" class="close">Close</a></div>
             <h3>Geoscience Australia's Samples API</h3>
-            <p style="text-align:center;"><a href="http://pid.geoscience.gov.au/sample/AU239"><img src="static/img/sample-AU239.png" alt="GA's Samples Catalogue AU239" style="width:460px;" /></a></p>
-            <p><a href="http://www.ga.gov.au">Geoscience Australia</a>'s web API delivering metadata for physical samples stored in it's repositories. Multiple 'views' and 'formats' of samples' metadata is available, including the <a href="http://dublincore.org/schemas/rdfs/">Dublin Core Metadata Initiative represented in RDF</a> general purpose metadata, and more specialised metadata according to more sample-specialised schema, such as the W3C's <a href="https://www.w3.org/2015/spatial/wiki/Main_Page">Spatial Data on the Web</a>'s <a href="https://www.w3.org/TR/vocab-ssn/">SOSA ontology</a>.</p>
+            <table>
+                <tr>
+                    <td>
+                        <p><a href="http://www.ga.gov.au">Geoscience Australia</a>'s web API delivering metadata for physical samples stored in it's repositories. Multiple 'views' and 'formats' of samples' metadata is available, including the <a href="http://dublincore.org/schemas/rdfs/">Dublin Core Metadata Initiative represented in RDF</a> general purpose metadata, and more specialised metadata according to more sample-specialised schema, such as the W3C's <a href="https://www.w3.org/2015/spatial/wiki/Main_Page">Spatial Data on the Web</a>'s <a href="https://www.w3.org/TR/vocab-ssn/">SOSA ontology</a>.</p>
+                        <p>The full catalogue ("Register" in Linked Data-speak) of all samples is available at <a href="http://pid.geoscience.gov.au/sample/">http://pid.geoscience.gov.au/sample/</a> and W3C <a href="https://www.w3.org/TR/dwbp/">Data on the Web Best Practices</a> are followed to allow for navigating the 2M samples.</p>
+                    </td>
+                    <td>
+                        <a href="http://pid.geoscience.gov.au/sample/AU239"><img src="static/img/sample-AU239.png" alt="GA's Samples Catalogue AU239" style="width:400px;" /></a>
+                    </td>
+                </tr>
+            </table>
+
             <ul style="text-align: left;">
                 <li>Sample AU239's landing page (HTML): <a href="http://pid.geoscience.gov.au/sample/AU239">http://pid.geoscience.gov.au/sample/AU239</a></li>
-                <li>Sample AU239's metadata in Dublin Core (HTML): <a href="http://pid.geoscience.gov.au/sample/AU239?_view=dc">http://pid.geoscience.gov.au/sample/AU239?_view=dc</a></li>
-                <li>Sample AU239's metadata in Dublin Core (RDF): <a href="http://pid.geoscience.gov.au/sample/AU239?_view=dc&_format=text/turtle">http://pid.geoscience.gov.au/sample/AU239?_view=dc&_format=text/turtle</a></li>
+                <li>Sample AU239's Dublin Core metadata (HTML): <a href="http://pid.geoscience.gov.au/sample/AU239?_view=dc">http://pid.geoscience.gov.au/sample/AU239?_view=dc</a></li>
+                <li>Sample AU239's Dublin Core metadata (RDF): <a href="http://pid.geoscience.gov.au/sample/AU239?_view=dc&_format=text/turtle">http://pid.geoscience.gov.au/sample/AU239?_view=dc&_format=text/turtle</a></li>
                 <li>Sample AU239's metadata in SOSA (RDF): <a href="http://pid.geoscience.gov.au/sample/AU239?_view=sosa&_format=text/turtle">http://pid.geoscience.gov.au/sample/AU239?_view=sosa&_format=text/turtle</a></li>
             </ul>
-            <p>The full catalogue ("Register" in Linked Data-speak) of all samples is available at <a href="http://pid.geoscience.gov.au/sample/">http://pid.geoscience.gov.au/sample/</a> and W3C <a href="https://www.w3.org/TR/dwbp/">Data on the Web Best Practices</a> are followed to allow for navigating the 2M samples.</p>
+
         </div>
 
         <div class="window" id="dialog-5">
             <div class="window-links"><a href="#" class="close">Close</a></div>
             <h3>The Dataset Ontology</h3>
-            <p  style="text-align:center;"><a href="http://data.gov.au/dataset/data-gov-au-dataset-ontology"><img src="static/img/dataset-ont.png" alt="The Dataset Ontology Landing Page in data.gov.au" style="width:470px;" /></a></p>
-            <p>While there are many ontologies that deal with datasets, such as the simple, well-known and widely-used <a href="https://www.w3.org/TR/vocab-dcat/">DCAT</a>, the purpose of this ontology is to cover aspects of organisational custodianship and governance using formulations common in many of the more rigorous ontologies such as <a href="https://www.w3.org/TR/vocab-org/">ORG</a>, rather than DACt's simplistic constructs.</p>
+            <table>
+                <tr>
+                    <td>
+                        <p>While there are many ontologies that deal with datasets, such as the simple, well-known and widely-used <a href="https://www.w3.org/TR/vocab-dcat/">DCAT</a>, the purpose of this ontology is to cover aspects of organisational custodianship and governance using formulations common in many of the more rigorous ontologies such as <a href="https://www.w3.org/TR/vocab-org/">ORG</a>, rather than DACt's simplistic constructs.</p>
             <p>This ontology has the expressive power of the ISO's <a href="https://www.iso.org/standard/53798.html">19115 -- metadata for geographic information standard</a> but, in using Linked Data and Semantic Web tools rather than the older XML, it is far more powerful.</p>
+                    </td>
+                    <td><a href="http://data.gov.au/dataset/data-gov-au-dataset-ontology"><img src="static/img/dataset-ont.png" alt="The Dataset Ontology Landing Page in data.gov.au" style="width:400px;" /></a></td>
+                </tr>
+            </table>
         </div>
 
         <div class="window" id="dialog-6">
@@ -279,6 +303,63 @@
             <h3>ACORN-SAT</h3>
             <p>July, 2017: currently offline due to a system change. Returning late July 2017</p>
         </div>
+
+        <div class="window" id="dialog-8">
+            <div class="window-links"><a href="#" class="close">Close</a></div>
+            <h3>FSDF's LINK graph</h3>
+            <table>
+                <tr>
+                    <td><a href="http://link.fsdf.org.au"><img src="static/img/link.png" alt="The LINK" style="width:400px;" /></a></td>
+                    <td>
+                        <p>The LINK is the Australian Government's Foundational Spatial Data Framework initiative's online database of input data, agencies and so on that contribute to its themed datasets.</p>
+                        <p>The LINK is presented via a Content Management System that makes all of its contents available via dynamic web pages that draw from a database. A graph exporter tool has been written to export that databases' content RDF data in accordance with the LINK's OWL ontology.</p>
+                        <ul>
+                            <li><a href="http://pid.geoscience.gov.au/def/ont/link">LINK ontology</a></li>
+                            <li><a href="http://pid.geoscience.gov.au/dataset/link.ttl">LINK graph as static RDF</a></li>
+                        </ul>
+                        <p>Soon this data will be presented via a SPARQL endpoint also</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="window" id="dialog-9">
+            <div class="window-links"><a href="#" class="close">Close</a></div>
+            <h3>GA's Public Data Ontology</h3>
+            <table>
+                <tr>
+                    <td><a href="http://pid.geoscience.gov.au/def/ont/gapd"><img src="static/img/gapd.png" alt="The LINK" style="width:400px;" /></a></td>
+                    <td style="text-align: left;">
+                        <p>Geoscience Australia is moving to present all of its public online resources in accordinace with a single ontology: the GA Public Data Ontology.</p>
+                        <p>The ontology describes how GA's datasets, services, vocabularies, vocab terms, licenses, samples and all other resources online represented in Linked Data are linked. Using the ontology you can see that a <strong>Service</strong> <em>operatesOn</em> <strong>Dataset(s)</strong> and that the cardinality is 1+, i.e. every GA Service will indicate <em>at least one</em> Dataset.</p>
+                        <p>The ontology provides semantic beyond that able to be provided by a single legacy catalogue tool.</p>
+                    </td>
+                </tr>
+            </table>
+            <ul>
+                <li><a href="http://pid.geoscience.gov.au/def/ont/gapd">GAPD ontology</a></li>
+            </ul>
+        </div>
+
+        <div class="window" id="dialog-10">
+            <div class="window-links"><a href="#" class="close">Close</a></div>
+            <h3>The FSDF's LINK ontology</h3>
+            <table>
+                <tr>
+                    <td><a href="http://link.fsdf.org.au"><img src="static/img/link.png" alt="The LINK" style="width:400px;" /></a></td>
+                    <td style="text-align: left;">
+                        <p>The Foundational Spatial Data Framework initiative's LINK system provides access to the input data, agencies, mandates and other items that make up the FSDF's themed datasets.</p>
+                        <p>This ontology defines very precicely the items in the LINK and allows them to be expressed in RDF. The ontology mostly re-uses well-known ontologies, such as <a href="https://www.w3.org/TR/prov-o/">PROV</a> and <a href="https://www.w3.org/TR/vocab-dcat/">DCAT</a> with the belief that maximum reuse of existing ontologies leads to better understanding of concepts expressed.</p>
+                        <p>The ontology provides semantic beyond that able to be provided by a single legacy catalogue tool.</p>
+                        <ul>
+                            <li><a href="http://pid.geoscience.gov.au/def/ont/link">LINK ontology</a></li>
+                            <li><a href="http://pid.geoscience.gov.au/dataset/link.ttl">LINK RDF dataset</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
         <!-- Mask to cover the whole screen -->
         <div id="mask"></div>
     </body>
