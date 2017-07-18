@@ -168,7 +168,7 @@
             <ul>
                 <li><strong>Vocabularies</strong> - structured lists with definitional content</li>
                 <li><strong>Systems</strong> - that deliver Linked Data content and support functions</li>
-                <li><strong>Datasets</strong> - of Linked Data, data</li>
+                <li><strong>Datasets</strong> - of Linked Data datasets</li>
                 <li><strong>Ontologies</strong> - structured concepts and categories in a subject area or domain</li>
             </ul>
             <p>Click on the examples of each type of thing below to see a pop-up description of each with links to the original online.</p>
@@ -196,7 +196,11 @@
                 <tr>
                     <td class="white">
                         <h3>Datasets</h3>
-                        <p><em>Coming!</em> We'll soon put here a cache of all of the Australian Linked Data that we can find with a Linked Data Spider (web crawler).</p>
+                        <p>Here are some examples of Linked Data datasets</p>
+                        <ul>
+                            <li><a href="#dialog-6" name="modal">Australian Linked Data Cache</a></li>
+                            <li><a href="#dialog-7" name="modal">ACORN SAT</a></li>
+                        </ul>
                     </td>
                     <td class="blue">
                         <h3>Ontologies</h3>
@@ -246,7 +250,7 @@
             <h3>Geoscience Australia's Samples API</h3>
             <p style="text-align:center;"><a href="http://pid.geoscience.gov.au/sample/AU239"><img src="static/img/sample-AU239.png" alt="GA's Samples Catalogue AU239" style="width:460px;" /></a></p>
             <p><a href="http://www.ga.gov.au">Geoscience Australia</a>'s web API delivering metadata for physical samples stored in it's repositories. Multiple 'views' and 'formats' of samples' metadata is available, including the <a href="http://dublincore.org/schemas/rdfs/">Dublin Core Metadata Initiative represented in RDF</a> general purpose metadata, and more specialised metadata according to more sample-specialised schema, such as the W3C's <a href="https://www.w3.org/2015/spatial/wiki/Main_Page">Spatial Data on the Web</a>'s <a href="https://www.w3.org/TR/vocab-ssn/">SOSA ontology</a>.</p>
-            <ul>
+            <ul style="text-align: left;">
                 <li>Sample AU239's landing page (HTML): <a href="http://pid.geoscience.gov.au/sample/AU239">http://pid.geoscience.gov.au/sample/AU239</a></li>
                 <li>Sample AU239's metadata in Dublin Core (HTML): <a href="http://pid.geoscience.gov.au/sample/AU239?_view=dc">http://pid.geoscience.gov.au/sample/AU239?_view=dc</a></li>
                 <li>Sample AU239's metadata in Dublin Core (RDF): <a href="http://pid.geoscience.gov.au/sample/AU239?_view=dc&_format=text/turtle">http://pid.geoscience.gov.au/sample/AU239?_view=dc&_format=text/turtle</a></li>
@@ -261,6 +265,19 @@
             <p  style="text-align:center;"><a href="http://data.gov.au/dataset/data-gov-au-dataset-ontology"><img src="static/img/dataset-ont.png" alt="The Dataset Ontology Landing Page in data.gov.au" style="width:470px;" /></a></p>
             <p>While there are many ontologies that deal with datasets, such as the simple, well-known and widely-used <a href="https://www.w3.org/TR/vocab-dcat/">DCAT</a>, the purpose of this ontology is to cover aspects of organisational custodianship and governance using formulations common in many of the more rigorous ontologies such as <a href="https://www.w3.org/TR/vocab-org/">ORG</a>, rather than DACt's simplistic constructs.</p>
             <p>This ontology has the expressive power of the ISO's <a href="https://www.iso.org/standard/53798.html">19115 -- metadata for geographic information standard</a> but, in using Linked Data and Semantic Web tools rather than the older XML, it is far more powerful.</p>
+        </div>
+
+        <div class="window" id="dialog-6">
+            <div class="window-links"><a href="#" class="close">Close</a></div>
+            <h3>The Australian Linked Data Cache</h3><br />
+            <p>A cache of "Australian" Linked Data (i.e. LD attempted to be sourced from Australia only, but this is hard) is being worked on by University of Canberra students and Geoscience Australia.</p>
+            <p>This dataset will be presented here in August, 2017.</p>
+        </div>
+
+        <div class="window" id="dialog-7">
+            <div class="window-links"><a href="#" class="close">Close</a></div>
+            <h3>ACORN-SAT</h3>
+            <p>July, 2017: currently offline due to a system change. Returning late July 2017</p>
         </div>
         <!-- Mask to cover the whole screen -->
         <div id="mask"></div>
