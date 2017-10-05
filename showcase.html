@@ -207,10 +207,11 @@
                     <td class="blue">
                         <h3>Ontologies</h3>
                         <p>Ontologies are data models that express knowledge within a domain and are often more complex than vocabularies although vocabularies themselves <em>are</em> a form of ontology.</p>
-                        <p>A great number of foundational, or fundamental, ontologies have been produced to cater for such broadly required concepts as time <a href="https://www.w3.org/TR/owl-time/">(TIME ontology)</a> and simple authoring information <a href="http://dublincore.org/documents/dc-rdf/">Dublin Core</a> and tracing changes to things over time <a href="https://www.w3.org/TR/prov-o/">(PROV-O, the provenance ontology)</a> this Linked Data WG has produced an ontology to define properties for datasets within the <a href="http://data.gov.au">data.gov.au</a> catalogue.</p>
+                        <p>A great number of foundational, or fundamental, ontologies have been produced to cater for such broadly required concepts as time (<a href="https://www.w3.org/TR/owl-time/">TIME ontology</a>) and simple authoring information <a href="http://dublincore.org/documents/dc-rdf/">Dublin Core</a> and tracing changes to things over time (<a href="https://www.w3.org/TR/prov-o/">PROV-O, the provenance ontology</a>) this Linked Data WG has produced an ontology to define properties for datasets within the <a href="http://data.gov.au">data.gov.au</a> catalogue.</p>
                         <ul>
                             <li><a href="#dialog-12" name="modal">The AGRIF Ontology</a></li>
                             <li><a href="#dialog-5" name="modal">The Dataset Ontology</a></li>
+                            <li><a href="#dialog-13" name="modal">The Energy Use Dataset Model ontology</a></li>
                             <li><a href="#dialog-9" name="modal">GA's Public Data ontology</a></li>
                             <li><a href="#dialog-10" name="modal">FSDF's LINK ontology</a></li>
                         </ul>
@@ -352,9 +353,10 @@
                 <tr>
                     <td>
                         <p>While there are many ontologies that deal with datasets, such as the simple, well-known and widely-used <a href="https://www.w3.org/TR/vocab-dcat/">DCAT</a>, the purpose of this ontology is to cover aspects of organisational custodianship and governance using formulations common in many of the more rigorous ontologies such as <a href="https://www.w3.org/TR/vocab-org/">ORG</a>, rather than DACt's simplistic constructs.</p>
-            <p>This ontology has the expressive power of the ISO's <a href="https://www.iso.org/standard/53798.html">19115 -- metadata for geographic information standard</a> but, in using Linked Data and Semantic Web tools rather than the older XML, it is far more powerful.</p>
+                        <p>This ontology has the expressive power of the ISO's <a href="https://www.iso.org/standard/53798.html">19115 -- metadata for geographic information standard</a> but, in using Linked Data and Semantic Web tools rather than the older XML, it is far more powerful.</p>
+                        <p><a href="http://reference.data.gov.au/def/ont/dataset">http://reference.data.gov.au/def/ont/dataset</a></p>
                     </td>
-                    <td><a href="http://data.gov.au/dataset/data-gov-au-dataset-ontology"><img src="static/img/dataset-ont.png" alt="The Dataset Ontology Landing Page in data.gov.au" style="width:400px;" /></a></td>
+                    <td><a href="http://reference.data.gov.au/def/ont/dataset"><img src="static/img/dataset-ont.png" alt="The Dataset Ontology Landing Page in data.gov.au" style="width:400px;" /></a></td>
                 </tr>
             </table>
         </div>
@@ -398,19 +400,19 @@
 
         <div class="window" id="dialog-9">
             <div class="window-links"><a href="#" class="close">Close</a></div>
-            <h3>GA's Public Data Ontology</h3>
+            <h3>GA's Public Data Model Ontology</h3>
             <table>
                 <tr>
-                    <td><a href="http://pid.geoscience.gov.au/def/ont/gapd"><img src="static/img/gapd.png" alt="The LINK" style="width:400px;" /></a></td>
+                    <td><a href="http://pid.geoscience.gov.au/def/ont/ga/pdm"><img src="static/img/gapd.png" alt="The GA PDM" style="width:400px;" /></a></td>
                     <td style="text-align: left;">
-                        <p>Geoscience Australia is moving to present all of its public online resources in accordinace with a single ontology: the GA Public Data Ontology.</p>
+                        <p>Geoscience Australia is moving to present all of its public online resources in accordance with a single ontology: the GA Public Data Ontology.</p>
                         <p>The ontology describes how GA's datasets, services, vocabularies, vocab terms, licenses, samples and all other resources online represented in Linked Data are linked. Using the ontology you can see that a <strong>Service</strong> <em>operatesOn</em> <strong>Dataset(s)</strong> and that the cardinality is 1+, i.e. every GA Service will indicate <em>at least one</em> Dataset.</p>
                         <p>The ontology provides semantic beyond that able to be provided by a single legacy catalogue tool.</p>
                     </td>
                 </tr>
             </table>
             <ul>
-                <li><a href="http://pid.geoscience.gov.au/def/ont/gapd">GAPD ontology</a></li>
+                <li><a href="http://pid.geoscience.gov.au/def/ont/ga/pdm">PDM ontology</a></li>
             </ul>
         </div>
 
@@ -459,6 +461,21 @@
                         <p>This ontology is expected to form one of the pillars of Semantic Web interoperability between Australian government organisations.</p>
                     </td>
                     <td><a href="http://reference.data.gov.au/def/ont/agrif"><img src="static/img/agrif-small.png" alt="The AGRIF Ontology's Record class" style="width:400px;" /></a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="window" id="dialog-13">
+            <div class="window-links"><a href="#" class="close">Close</a></div>
+            <h3>The Energy Use Dataset Model ontology</h3>
+            <table>
+                <tr>
+                    <td>
+                        <p>This ontology, which is only at an early stage of development, is a specialisation of the general <a href="http://reference.data.gov.au/def/ont/">Dataset ontology</a>, listed above. This ontology is made to include specific metadata elements of relevance to policy makers and researchers interested in domestic energy use patterns. The ontology will be used by CSIRO who are publishing it to describe datasets they are delivering to that community via a data platform.</p>
+                        <p>Due to its specialised nature, this ontology is published using the <code>infrastructure</code> subdomain of <code>data.gov.au</code>, rather than the general <code>reference</code> subdomain where the Dataset ontology is published.</p>
+                        <p><a href="http://infrastructure.data.gov.au/def/ont/eudm">http://infrastructure.data.gov.au/def/ont/eudm</a></p>
+                    </td>
+                    <td><a href="http://infrastructure.data.gov.au/def/ont/eudm"><img src="static/img/eudm.png" alt="The EUDM Ontology's class diagram" style="width:400px;" /></a></td>
                 </tr>
             </table>
         </div>
