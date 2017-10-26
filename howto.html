@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AGLDWG</title>
+	<meta charset="utf-8" />
+    <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+	<meta name="dcterms.format" content="text/html" />
+	<meta name="dcterms.language" content="en" />
+	<meta name="dcterms.type" content="Text" />
+	<meta name="dcterms.publisher" content="Department of Communications" />
+	<meta name="dcterms.creator" content="Nicholas Car" />
+	<meta name="dcterms.title" content="Australian Government Linked Data Working Group home page" />
+	<meta name="dcterms.date" content="2017-02-02T20:30+10:00" />
+	<meta name="dcterms.modified" content="2017-04-02T00:40+10:00" />
+	<meta name="description" content="Contact page" />
+	<meta name="generator" content="Lovingly coded by hand" />
+
+    <link type="text/css" rel="stylesheet" href="static/css/simple.css" media="all" />
+</head>
+<body>
+	<header id="header">
+        <table style="width:900px">
+            <tr>
+                <td id="banner"><!--<img src="../static/img/aus-gov-logo-stacked-black.jpg" title="Australian Government Coat of Arms" style="height:100px">--></td>
+                <td style="text-align:right" id="navigation">
+                    <a href="/showcase.html">Linked Data Showcase</a> |
+                    <a href="/index.html">Home</a> |
+                    <a href="/events.html">Events</a> |
+                    <a href="/groups.html">Groups</a> |
+					<a href="/howto.html">How To</a> |
+                    <a href="/contact.html">Contact</a>
+                </td>
+            </tr>
+        </table>
+	</header>
+	<div id="main">
+        <h1>Australian Government Linked Data Working Group</h1>
+        <h2>How To</h2>
+        <p>The AGLDWG can assist Australian governments with some Linked Data-related tasks. At the moment, the task that is most requests is helping organisations publish <a href="showcase.html">ontologies</a>.</p>
+        <h3>How to publish an ontology</h3>
+        <h4>Suitability</h4>
+        <p>The AGLDWG is keen to assist government organisation publish Semantic Web/Linked Data ontologies for any purposes they see fit within the realm of government business.</p>
+        <h4>Examples</h4>
+        <p>To date we have published some big, and some small, ontologies, such as:</p>
+        <ul>
+            <li>
+                <a href="http://reference.data.gov.au/def/ont/agrif">The AGRIF Ontology</a>
+                <ul>
+                    <li>an ontology published by the Department of Finance for whole-of-government record keeping</li>
+                </ul>
+            </li>
+            <li>
+                <a href="http://reference.data.gov.au/def/ont/dataset">The Dataset Ontology</a>
+                <ul>
+                    <li>an ontology published by the AGLDWG itself for describing datasets in catalogues such as <a href="http://data.gov.au">data.gov.au</a> using Semantic Web terms</li>
+                </ul>
+            </li>
+            <li>
+                <a href="http://infrastructure.data.gov.au/def/ont/edum">The Energy Use Dataset Model (EUDM) ontology</a>
+                <ul>
+                    <li>an draft ontology published by CSIRO for describing specialised energy-related Datasets. A specialised version of the Dataset Ontology</li>
+                </ul>
+            </li>
+        </ul>
+        <h4>Process</h4>
+        <p>We suggest this general process if you wish to publish an ontology via the AGLDWG, which means practically publishing it using some part of the data.gov.au domain:</p>
+        <ol>
+            <li>
+                <strong>Arrange</strong> suitable URI namespaces for your ontology
+                <ul>
+                    <li>Ontologies will likely need several URIs. A <code>/def/</code> URI (like <a href="http://reference.data.gov.au/def/ont/agrif">http://reference.data.gov.au<strong>/def/</strong>ont/agrif</a>) which is the "home" of the ontology and one or more <em>register</em> URIs which are places where things using the ontology will live.</li>
+                    <li>The EUDM ontology is defined at <a href="http://infrastructure.data.gov.au/def/ont/edum">http://infrastructure.data.gov.au/def/ont/edum</a></li>
+                    <li>The EUDM things - datasets - will be listed at <a href="http://infrastructure.data.gov.au/dataset/eudm/">http://infrastructure.data.gov.au/dataset/eudm/</a>, <a href="http://transport.data.gov.au/dataset/eudm/">http://transport.data.gov.au/dataset/eudm/</a> and potentially elsewhere too.</li>
+                    <li><em>The AGLDWG will help find appropriate URIs for your ontology and then implement the technical arrangements for them</em></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Design</strong> your ontology
+                <ul>
+                    <li>You will have to design this yourself! We can assist with recommending textbooks, people and tools, just ask</li>
+                    <li>We recommend using the <a href="https://protege.stanford.edu/">Protégé</a> desktop ontology builder tool to perform your modelling. It will produce an ontology document in RDF</li>
+                    <li>You will need to use the URI assigned to the ontology in the ontology builder</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Present</strong> your ontology
+                <ul>
+                    <li>An ontology must, at least, be delivered in an RDF file however it is good practice and a requirement of the AGLDWG to also generate an HTML, human-readable, version of the ontology to document it.</li>
+                    <li>HTML documents can be generated from ontology files using a range of tools such as <a href="http://www.essepuntato.it/lode">LODE</a>.</li>
+                    <li>The HTML generated for the Dataset ontology is the web page visible at the ontology's persistent address: <a href="http://reference.data.gov.au/def/ont/dataset">http://reference.data.gov.au/def/ont/dataset</a></li>
+                    <li>We suggest including a diagram of the ontology's main classes and relationships - LODE and similar tools won't do this automatically. You could simply use PowerPoint as is used for the <a href="infrastructure.data.gov.au/def/ont/eudm">EUDM ontology</a></li>
+                    <li>See the "make_html.txt" file in the <a href="https://github.com/AGLDWG/agrif-ont">AGRIF ontology's code repository</a> for a full explanation of a process you can emulate</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Deliver</strong> your ontology
+                <ul>
+                    <li>The AGLDWG can host simple ontologies easily for you on our web server, as we host the three examples above</li>
+                    <li>You may choose to host your ontology elsewhere, in which case you will just need to arrange where the AGLDWG points the assigned URIs too</li>
+                    <li>The AGLDWG will retain a copy of the ontology, even if you host it elsewhere as a fall-back to ensure all URIs minted can always point somewhere</li>
+                </ul>
+            </li>
+        </ol>
+	</div> <!-- main_content -->
+	<div id="footer">
+		<div id="footer_content">
+			<div id="license">
+				<img src="https://toolkit.data.gov.au/skins/common/images/cc-by.png" alt="CC-BY 4.0 licence, except the Commonwealth Coat of Arms" width="88" height="31">
+				This web page content is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+			</div>
+			<div style="float:right; width:49%; text-align:right;">
+
+			</div>
+			<div style="clear:both;">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>
