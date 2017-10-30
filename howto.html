@@ -68,9 +68,24 @@
             <li>
                 <strong>Arrange</strong> suitable URI namespaces for your ontology
                 <ul>
-                    <li>Ontologies will likely need several URIs. A <code>/def/</code> URI (like <a href="http://reference.data.gov.au/def/ont/agrif">http://reference.data.gov.au<strong>/def/</strong>ont/agrif</a>) which is the "home" of the ontology and one or more <em>register</em> URIs which are places where things using the ontology will live.</li>
-                    <li>The EUDM ontology is defined at <a href="http://infrastructure.data.gov.au/def/ont/edum">http://infrastructure.data.gov.au/def/ont/edum</a></li>
-                    <li>The EUDM things - datasets - will be listed at <a href="http://infrastructure.data.gov.au/dataset/eudm/">http://infrastructure.data.gov.au/dataset/eudm/</a> <em>(not yet working)</em>, <a href="http://transport.data.gov.au/dataset/eudm/">http://transport.data.gov.au/dataset/eudm/</a> <em>(not yet working)</em> and potentially elsewhere too.</li>
+                    <li>Ontologies will likely need several URIs.
+						<ul>
+							<li>A <code>/def/</code> URI (like <a href="http://reference.data.gov.au/def/ont/agrif">http://reference.data.gov.au<strong>/def/</strong>ont/agrif</a>) which is the "home" of the ontology; this will usually also be the base URI for the new classes and properties on the ontology</li>
+							<li>
+								one or more URIs denoting lists or vocabularies of things required when the ontology is used, but which are maintained on a different schedule
+								<ul>
+									<li>note that these URIs are different again from the addresses where datasets are published</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+                    <li>
+						For example:
+						<ul>
+							<li>The EUDM ontology is defined at <a href="http://infrastructure.data.gov.au/def/ont/edum">http://infrastructure.data.gov.au/def/ont/edum</a></li>
+							<li>The EUDM things - datasets - will be listed at <a href="http://infrastructure.data.gov.au/dataset/eudm/">http://infrastructure.data.gov.au/dataset/eudm/</a> <em>(not yet working)</em>, <a href="http://transport.data.gov.au/dataset/eudm/">http://transport.data.gov.au/dataset/eudm/</a> <em>(not yet working)</em> and potentially elsewhere too.</li>
+						</ul>
+					</li>
                     <li><em>The AGLDWG will help find appropriate URIs for your ontology and then implement the technical arrangements for them</em></li>
                 </ul>
             </li>
@@ -78,17 +93,17 @@
                 <strong>Design</strong> your ontology
                 <ul>
                     <li>You will have to design this yourself! We can assist with recommending textbooks, people and tools, just ask</li>
-                    <li>We recommend using the <a href="https://protege.stanford.edu/">Protégé</a> desktop ontology builder tool to perform your modelling. It will produce an ontology document in RDF</li>
-                    <li>You will need to use the URI assigned to the ontology in the ontology builder</li>
+                    <li>We recommend using a desktop ontology builder tool to perform your modelling, such as <a href="https://protege.stanford.edu/">Protégé</a>. It will produce an ontology document in an RDF document</li>
+                    <li>You will need to use the URI assigned to the ontology (above) in the ontology builder</li>
                 </ul>
             </li>
             <li>
                 <strong>Present</strong> your ontology
                 <ul>
-                    <li>An ontology must, at least, be delivered in an RDF file however it is good practice and a requirement of the AGLDWG to also generate an HTML, human-readable, version of the ontology to document it.</li>
-                    <li>HTML documents can be generated from ontology files using a range of tools such as <a href="http://www.essepuntato.it/lode">LODE</a>.</li>
-                    <li>The HTML generated for the Dataset ontology is the web page visible at the ontology's persistent address: <a href="http://reference.data.gov.au/def/ont/dataset">http://reference.data.gov.au/def/ont/dataset</a></li>
-                    <li>We suggest including a diagram of the ontology's main classes and relationships - LODE and similar tools won't do this automatically. You could simply use PowerPoint as is used for the <a href="infrastructure.data.gov.au/def/ont/eudm">EUDM ontology</a></li>
+                    <li>An ontology must, at least, be delivered in an RDF file (in rdf/xml, text/turtle or another RDF format). However it is good practice and a requirement of the  AGLDWG to also provide a human-readable version of the ontology to document it (HTML)..</li>
+                    <li>The latter can be generated from ontology files using a range of tools such as <a href="http://www.essepuntato.it/lode">LODE</a>.</li>
+                    <li>The HTML page for the ontology will be provided to a web-browser requesting the ontology's persistent address: e.g. <a href="http://reference.data.gov.au/def/ont/dataset">http://reference.data.gov.au/def/ont/dataset</a></li>
+                    <li>We suggest including a diagram of the ontology's main classes and relationships.These have to be prepared separately as most tools won't do it automatically. You can use CMap or PowerPoint (which is used for the <a href="infrastructure.data.gov.au/def/ont/eudm">EUDM ontology</a>).</li>
                     <li>See the "make_html.txt" file in the <a href="https://github.com/AGLDWG/agrif-ont">AGRIF ontology's code repository</a> for a full explanation of a process you can emulate</li>
                 </ul>
             </li>
