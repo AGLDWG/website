@@ -115,6 +115,8 @@
 
     <div id="pubont" class="tabcontent">
         <h3>How to publish an ontology</h3>
+        <h4>How we can help</h4>
+        <p>The AGLDWG can arrange namespaces for ontology URIs, help set up and manage those URI redirects and hep with ontology presentation (both technical and aesthetic). We can’t really help develop ontologies as this is often a task that requires a lot of domain knowledge.</p>
         <h4>Suitability</h4>
         <p>The AGLDWG is keen to assist government organisations publish Semantic Web/Linked Data ontologies for any purposes they see fit within the realm of government business using the persistent data.gov.au namespace.</p>
         <h4>Examples</h4>
@@ -139,6 +141,10 @@
                 </ul>
             </li>
         </ul>
+        <p style="text-align:center; font-size:small;">
+            <img src="static/img/agrif-small.png" style="width:500px;" /><br />
+            A snippet of the AGRIF ontology with the <a href="http://reference.data.gov.au/def/ont/agrif#Record" style="text-decoration:line-through;">Record</a> class at the center
+        </p>
         <h4>Process</h4>
         <p>We suggest this general process if you wish to publish an ontology to be used for Australian Government data, which means practically publishing it using some part of the data.gov.au domain:</p>
         <ol>
@@ -197,10 +203,13 @@
 
     <div id="pubvoc" class="tabcontent">
         <h3>Publish a Vocabulary</h3>
-        <h4>What is a vocab?</h4>
-        <p>Linked Data and the Semantic Web rely on structured, controlled vocabularies for object classification and for presenting list of objects themselves (registers). For examples of both sorts, see our <a href="showcase.html">Showcase page</a>.</p>
+        <h4>How we can help</h4>
+        <p>We can assist with URI assignment & redirection for vocabs (including the individual terms within them) and, depending on the vocab type (see below) with some presentation and hosting.</p>
+        <h4>What is a vocab - different types</h4>
+        <p>Linked Data and the Semantic Web rely on structured, controlled vocabularies of terms for object classification and for presenting lists of objects themselves (registers). For examples of both sorts, see our <a href="showcase.html">Showcase page</a>.</p>
         <h4>How to Represent vocabs</h4>
-        <p>For classification vocabularies, within which we include thesauri, classification schemes, taxonomies, subject-heading systems, code lists &amp; term lists we recommend the use of the <a href="https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System">SKOS, the Simple Knowledge Organization System</a>. For registers of objects, we recommend their presentation as lists of instances of <a href="https://en.wikipedia.org/wiki/Web_Ontology_Language">OWL</a> class objects.</p>
+        <p>For classification vocabularies, within which we include thesauri, classification schemes, taxonomies, subject-heading systems, code lists &amp; term lists we recommend the use of the <a href="https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System">SKOS, the Simple Knowledge Organization System</a>.</p>
+        <p>For registers of objects, we recommend their presentation as lists of instances of <a href="https://en.wikipedia.org/wiki/Web_Ontology_Language">OWL</a> class objects.</p>
         <p>For both SKOS-based vocabularies and Linked Data Registers, persistent URIs should be used and if the vocabulary or register is an Australian government one, we can make available a data.gov.au-based namespace for it. data.gov.au namespaces can be used with vocabularies delivered by the AGLDWG or others, with arrangement.</p>
         <h4>Classification vocabularies</h4>
         <p>The AGLDWG recommends using the <a href="http://www.ands.org.au">Australian National Data Service</a>'s SKOS vocabulary editing tool and publishing platform known as <a href="http://vocabs.ands.org.au">Research Vocabularies Australia - RVA</a>, which is free for use by Australian researchers and government entity members. Many members already make use of this service and have published over 100 vocabularies using it. data.gov.au domain-based URIs can work with RVA-delivered vocabularies.</p>
@@ -216,12 +225,38 @@
 
     <div id="pubreg" class="tabcontent">
         <h3>Publish a Register</h3>
-        <p>Stuff</p>
+        <h4>How we can help</h4>
+        <p>The AGLWDG can assist with allocating data.gov.au URIs to registers and with URI redirection setup. We can also assist the functioning of registers by checking that they respond to expected Linked Data/Semantic Web requests, like for HTML and machine-readable versions, and with basic government data publication requirements.</p>
+        <p>Depending on the size and nature of the register, we can also assist with hosting: we could, for instance, host a small, static, text file-based register (perhaps you’re listing all instances of airports in Australia, a list at most in the thousands) but we could not host a large, database-generated register (perhaps all the geo coded addresses in Australia which contains more than 13M entries).
+        </p>
+        <h4>Suitability</h4>
+        <p>The AGLDWG is keen to assist government organisations publish Semantic Web/Linked Data registers of class instances for any purposes they see fit within the realm of government business using the persistent data.gov.au namespace.</p>
+        <h4>Examples</h4>
+        <p>To date we have only just started assisting organisations with publishing registers. Some examples of small and large sorts are:</p>
+        <ul>
+            <li>
+                <a href="http://reference.data.gov.au/disposalclass/" style="text-decoration:line-through;">Disposal Class register</a>
+                <ul>
+                    <li>A register of OWL instances of Disposal Class objects with the class definition coming from the Department of Finance’s <a href="http://reference.data.gov.au/def/ont/agrif">AGRIF ontology</a>.</li>
+                    <li>This is a very small register (a few text files – see the repo here [ref]) that is hosted on the AGLDWG’s webserver</li>
+                </ul>
+            </li>
+            <li>
+                <a href="http://reference.data.gov.au/address/gnaf/" style="text-decoration:line-through;">G-NAF Address register</a>
+                <ul>
+                    <li>A register of Address instances, as defined by the <a href="http://reference.data.gov.au/def/ont/agrif" style="text-decoration:line-through;">G-NAF ontology</a>.</li>
+                    <li>This is a very large register (13M+ instances) delivered by a custom Linked Data API hosted outside the AGLDWG’s systems</li>
+                    <li>The register URI is redirected to the maintainer, PSMA’s, system</li>
+                </ul>
+            </li>
+        </ul>
+        <h4>Process</h4>
+        <p><em>Coming!</em></p>
     </div>
 
     <div id="pubdata" class="tabcontent">
         <h3>Publish Linked Data data</h3>
-        <p>Stuff</p>
+        <p><em>Coming!</em></p>
     </div>
 
     <!-- show first tab on page load -->
