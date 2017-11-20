@@ -1,0 +1,17 @@
+* add HowTo for reserving a URI space for a Register
+* add HowTo for publishing a minimal Register
+    - use the demo register of DisposalClass
+* add a picture to the HowTo for each item
+	- e.g. a screenshot of the AGRIF O for HowTo ont pub
+* add requirements for the following to Ont pub HowTo:
+    - minimal AGLS metadata
+    - minimal LD operations (HTML & RDF)
+    - minimal WCAG2 readability in the HTML
+
+* list PID URI patterns not here but on pid.data VM, using queries against the PID Svc instances
+
+* add Disposal Class Repo link to HowTo draft page
+    - create the repo
+    - text files for Register
+        - 2 x for HTML & ttl
+        - 2 x for each instance
