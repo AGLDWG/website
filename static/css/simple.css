@@ -103,10 +103,16 @@ table.lined th {
     vertical-align: top;
     background-color: rgb(18, 41, 58);
     color: white;
-    padding: 5px;
+    padding: 10px;
 }
 .blue a {
     color: lightblue;
+}
+
+.blue h2,
+.blue h3,
+.blue h4 {
+    color: white;
 }
 
 .white {
@@ -117,4 +123,30 @@ table.lined th {
 }
 .white a {
     color: blue;
+}
+
+table.altrows {
+    border-collapse: collapse;
+}
+
+
+table.altrows tr:nth-child(even) {
+    background: #e4e4e4;
+    border-top: 1px solid #D8D8D8;
+}
+table.altrows tr:nth-child(odd) {
+    background: #ffffff;
+    border-top: 1px solid #D8D8D8;
+}
+
+table.altrows th,
+table.altrows td {
+    /*border: solid 1px black;*/
+    padding: 5px;
+}
+
+table.pretty th {
+    color: white;
+    font-weight: bold;
+    background-color: #006983;
 }
