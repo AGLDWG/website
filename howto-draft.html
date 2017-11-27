@@ -17,77 +17,13 @@
 
     <link type="text/css" rel="stylesheet" href="static/css/simple.css" media="all" />
 
-    <!-- for tabs -->
-    <style>
-        /* Style the tab */
-        div.tab {
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
-        }
-
-        /* Style the buttons inside the tab */
-        div.tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-        }
-
-        /* Change background color of buttons on hover */
-        div.tab button:hover {
-            background-color: #ddd;
-        }
-
-        /* Create an active/current tablink class */
-        div.tab button.active {
-            background-color: #ccc;
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border: 1px solid #ccc;
-            border-top: none;
-        }
-
-        button {
-            font-weight: 400;
-            font-size: 100%;
-            font-family: Roboto,sans-serif;
-        }
-    </style>
-    <script>
-        function openCity(evt, cityName) {
-            // Declare all variables
-            var i, tabcontent, tablinks;
-
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            // Show the current tab, and add an "active" class to the button that opened the tab
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-    </script>
+    <script type="application/javascript" src="static/js/tabs.js"></script>
 </head>
 <body>
     <header id="header" style="text-align:right; padding-top:10px;">
-        <a href="/showcase.html">Linked Data Showcase</a> |
         <a href="/index.html">Home</a> |
+        <a href="/assistance.html">Assistance</a> |
+        <a href="/showcase.html">Showcase</a> |
         <a href="/events.html">Events</a> |
         <a href="/groups.html">Groups</a> |
         <a href="/howto.html">How To</a> |
@@ -97,42 +33,38 @@
     <div id="main">
         <h1>Australian Government Linked Data Working Group</h1>
         <h2>How To</h2>
-        <p>The AGLDWG can assist Australian governments with some Linked Data-related tasks and for those that we can, we will publish a series of How To guides here.</p>
-        <p>In addition, we are keen to point to resources that will help people with Linked Data-related tasks that we cant help with directly.</p>
+        <p>The AGLDWG can assist Australian governments with some Linked Data-related tasks and for those that we can, we publish a series of How To guides here.</p>
+        <p>In addition, we are keen to point to resources that will help people with Linked Data-related tasks that we can't help with directly.</p>
         <p>The scope of what we can help with is growing but, at the moment, we can assist with:</p>
         <ul>
             <li>
-                <strong>Publishing Linked Data resources</strong> - see the next section<br />
+                <strong>Publishing Linked Data resources</strong><br />
                 <ul>
-                    <li>Ontologies</li>
-                    <li>Vocabularies</li>
-                    <li>Registers of LD objects</li>
-                    <li>Linked Data data (databases/datasets)</li>
+                    <li>Ontologies, Vocabularies, Registers of LD objects, Linked Data data (databases/datasets)</li>
                 </ul>
             </li>
             <li>
                 <strong>Learning about Linked Data</strong><br />
                 <ul>
-                    <li>Direct help about Linked Data is mostly given through participation in the group's various meetings. The group has always been a Linked Data Community of Practice and we encourage those starting out or even just vaguely interested in Linked Data to join some of our meetings to learn.</li>
-                    <li>We also link to some of our favourite Linked Data text books and online media, see </li>
+                    <li>In addition to interactions in the group, we can indicate useful resources to read</li>
                 </ul>
             </li>
             <li>
                 <strong>Building Linked Data</strong><br />
                 <ul>
-                    <li>A number of members of the Group are actively engaged with Linked Data product generation within and across government and some private sector agencies. Join the group or just ask if you wish to know what has been or what could perhaps be done. We are always interested to understand people's Linked Data needs!</li>
+                    <li>Some group members work building Linked Data data and systems and may be able to assist others</li>
                 </ul>
             </li>
         </ul>
-        <h3>Publishing Linked Data resources</h3>
-        <p>At the moment, the task that is most requested of the Group is to help organisations publish <a href="showcase.html">ontologies</a>.</p>
-        <p>Other publication tasks we can help with are listed in the tabs below.</p>
+        <h3>Publishing Linked Data resources <em>via this group</em></h3>
+        <p>At the moment, the task that is most requested of the Group is to help organisations publish <a href="showcase.html">ontologies</a>. Other publication tasks we can help with are listed in the tabs below.</p>
 
         <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'pubont')" id="defaultOpen">Publish an Ontology</button>
+            <button class="tablinks" onclick="openCity(event, 'pubont')">Publish an Ontology</button>
             <button class="tablinks" onclick="openCity(event, 'pubvoc')">Publish a Vocabulary</button>
             <button class="tablinks" onclick="openCity(event, 'pubreg')">Publish a Register</button>
             <button class="tablinks" onclick="openCity(event, 'pubdata')">Publish Linked Data data</button>
+            <button class="tablinks" onclick="openCity(event, 'pubnone')" id="defaultOpenPub"><em>hide</em></button>
         </div>
 
         <div id="pubont" class="tabcontent">
@@ -388,9 +320,26 @@
             <p><em>Coming!</em></p>
         </div>
 
+        <h3>Learning about Linked Data</h3>
+        <p>Direct help about Linked Data is mostly given through participation in the group's various meetings. The group has always been a Linked Data Community of Practice and we encourage those starting out or even just vaguely interested in Linked Data to join some of our meetings to learn.</p>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'learn1')">LD Background</button>
+            <button class="tablinks" onclick="openCity(event, 'learn2')">Vocabularies</button>
+            <button class="tablinks" onclick="openCity(event, 'learn3')">Ontologies</button>
+            <button class="tablinks" onclick="openCity(event, 'learn4')">Existing Linked Data data</button>
+            <button class="tablinks" onclick="openCity(event, 'learnnone')" id="defaultOpenLearn"><em>hide</em></button>
+        </div>
+
+        <div id="learn1" class="tabcontent">
+            <h3>Learning the background to Linked Data</h3>
+        </div>
+
+        <h3>Building Linked Data</h3>
+        <p>A number of members of the Group are actively engaged with Linked Data product generation within and across government and some private sector agencies. Join the group or just ask if you wish to know what has been or what could perhaps be done. We are always interested to understand people's Linked Data needs!</p>
         <!-- show first tab on page load -->
         <script>
-            document.getElementById("defaultOpen").click();
+            document.getElementById("defaultOpenPub").click();
+            document.getElementById("defaultOpenLearn").click();
         </script>
         <div style="height:20px;">&nbsp;</div>
     </div> <!-- main_content -->
