@@ -47,6 +47,7 @@ p, li {
     background: url("../img/comms_footer_bg.svg") top left no-repeat;
     background-color: #e4e4e4;
     padding-top: 2em;
+    margin-top: 25px;
 }
 
 #footer_content {

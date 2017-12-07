@@ -15,3 +15,13 @@
     - text files for Register
         - 2 x for HTML & ttl
         - 2 x for each instance
+
+* update Join page metadata
+
+* roll out Join nav link
+
+* space and tidy the Join blue boxes
+
+* blue box right margin on index
+
+* reconsider column width on index page
