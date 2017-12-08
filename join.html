@@ -33,20 +33,93 @@
         <h1>Australian Government Linked Data Working Group</h1>
         <h2>Join</h2>
 		<p>Thanks for you interest in joining the Australian Government Linked Data Working Group! We appreciate your enthusiasm for Linked Data and look forward to working more closely with you in coming months. If you would like to join, there are two options:</p>
-        <table>
-            <tr style="margin: 0 50px 0 50px">
+        <table style="border-collapse:collapse;">
+            <tr>
                 <td class="blue" style="width: 50%;">
                     <h4 style="color:lightblue;">Stay in touch</h4>
                     <p>If you'd like to receive regular updates about Linked Data in Australia, and have the opportunity to tap into a network of people interested in Linked Data, please subscribe to our mailing list.</p>
-                    <input type=text" />&nbsp;<input type="submit" value="Stay in touch" /><!-- prompt text for text input for "Your email address..." -->
+					<p>&nbsp;</p>
+
                 </td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
                 <td class="blue" style="width: 50%">
                     <h4 style="color:lightblue;">Join the Working Group</h4>
                     <p>If you see yourself as a driver of Linked Data solutions for Australia, if perhaps you'd like to take more of a lead in recommending Linked Data patterns for others, or if you want to promote Linked Data in Australian government, join the Working Group!</p>
-                    <input type=text" />&nbsp;<input type="submit" value="Join" /><!-- prompt text for text input for "Your email address..." -->
+
+                </td>
+            </tr>
+            <tr>
+                <td class="blue">
+                    <form id='form_stay' method='POST'>
+                        <input type="hidden" name="which_form" class="required" value="stay" />
+                        <input type="text" name="their_email" class="required email" placeholder="You email address..."  />&nbsp;
+                        <input type="submit" value="Stay in touch" style="height:26px; font-weight:bold;" />
+                    </form>
+                </td>
+                <td></td>
+                <td class="blue">
+                    <form id='form_join' method='POST'>
+                        <input type="hidden" name="which_form" class="required" value="join" />
+                        <input type="text" name="their_email" class="required email" placeholder="You email address..."  />&nbsp;
+                        <input type="submit" value="Stay in touch" style="height:26px; font-weight:bold;" />
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4 id='thanks-stay' style="color:darkred; display:none;">
+                        Thanks for contacting us, we'll be in touch soon!
+                    </h4>
+                </td>
+                <td></td>
+                <td>
+                    <h4 id='thanks-join' style="color:darkred; display:none;">
+                        Thanks for contacting us, we'll be right in touch!
+                    </h4>
                 </td>
             </tr>
         </table>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js" ></script>
+
+        <script>
+            $(function () {
+                $('form#form_stay').validate({
+                    messages: {},
+                    submitHandler: function (form) {
+                        $.ajax({
+                            url: "//formspree.io/nicholas.car@csiro.au",
+                            method: "POST",
+                            data: $(form).serialize(),
+                            dataType: "json",
+                            success: function (data) {
+                                $("form#form_stay :input").prop("disabled", true);
+                                $('#thanks_stay').show();
+                            }
+                        });
+                        return false;
+                    }
+                });
+
+                $('form#form_join').validate({
+                    messages: {},
+                    submitHandler: function (form) {
+                        $.ajax({
+                            url: "//formspree.io/nicholas.car@gmail.com",
+                            method: "POST",
+                            data: $(form).serialize(),
+                            dataType: "json",
+                            success: function (data) {
+                                $("form#form_join :input").prop("disabled", true);
+                                $('#thanks_join').show();
+                            }
+                        });
+                        return false;
+                    }
+                });
+            });
+        </script>
 
 	</div> <!-- main_content -->
 
