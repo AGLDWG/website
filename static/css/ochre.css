@@ -105,19 +105,19 @@ table.lined th {
     max-width:150px;
 }
 
-.blue {
+.ochre {
     vertical-align: top;
     background-color: rgb(133, 25, 2);
     color: white;
     padding: 10px;
 }
-.blue a {
-    color: #DE0000;
+.ochre a {
+    color: #616161;
 }
 
-.blue h2,
-.blue h3,
-.blue h4 {
+.ochre h2,
+.ochre h3,
+.ochre h4 {
     color: white;
 }
 
