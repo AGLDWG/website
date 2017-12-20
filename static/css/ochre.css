@@ -41,11 +41,11 @@ h4 {
 p, li {
     font-family: "Helvetica Neue", sans-serif;
     line-height: 1.5em;
-    color: #461616;
+    color: rgb(51, 26, 0);
 }
 
 a {
-    color: #DE0000;
+    color: rgb(153, 79, 0); /*#DE0000;*/
 }
 
 #footer {
