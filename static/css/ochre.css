@@ -48,6 +48,10 @@ a {
     color: rgb(153, 79, 0); /*#DE0000;*/
 }
 
+#nav {
+    padding-top:60px;
+}
+
 #footer {
     background: url("../img/comms_footer_bg.svg") top left no-repeat;
     background-color: #e4e4e4;
@@ -121,7 +125,7 @@ table.lined th {
     color: white;
 }
 
-div.grey {
+.grey {
     background-color: #e4e4e4; padding:10px;
 }
 
@@ -130,9 +134,6 @@ div.grey {
     background-color: white;
     color: rgb(133, 25, 2);
     padding: 5px;
-}
-.white a {
-    color: blue;
 }
 
 table.altrows {

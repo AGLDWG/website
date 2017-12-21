@@ -15,7 +15,7 @@
     <meta name="description" content="AGLDWG Linked Data showcase" />
     <meta name="generator" content="Lovingly coded by hand" />
 
-    <link type="text/css" rel="stylesheet" href="static/css/simple.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="static/css/ochre.css" media="all" />
 
     <script src="static/js/jquery-3.2.1.min.js"></script>
     <script>
@@ -125,17 +125,22 @@
 </head>
 <body>
     <header id="header" style="text-align:right; padding-top:10px;">
-        <a href="/index.html">Home</a> |
-        <a href="/assistance.html">Assistance</a> |
-        <a href="/showcase.html">Showcase</a> |
-        <a href="/events.html">Events</a> |
-        <a href="/groups.html">Groups</a> |
-        <a href="/howto.html">How To</a> |
-        <a href="/contact.html">Contact</a> |
-        <a href="/join.html">Join</a>
+        <div style="width:150px; height:150px; float:left;">
+            <img src="static/img/agldwg-logo-ochre-150.png" alt="AGLDWG logo" />
+        </div>
+        <div id="nav">
+            <a href="index.html">Home</a> |
+            <a href="assistance.html">Assistance</a> |
+            <a href="showcase.html">Showcase</a> |
+            <a href="events.html">Events</a> |
+            <a href="groups.html">Groups</a> |
+            <a href="howto.html">How To</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="join.html">Join</a>
+        </div>
     </header>
 
-    <div id="main">
+    <div id="main" style="clear:both;">
         <h1>Australian Government Linked Data Working Group</h1>
         <h2>Showcase</h2>
         <p>The AGLDWG has a role to play in communicating the benefits and technical aspects of Linked Data across government. So, here are a list of Linked Data systems and datasets already implemented by Australian government agencies as well as a few foundational Linked Data introductory resources.</p>
@@ -149,7 +154,7 @@
         <p>Click on the examples of each type of thing below to see a pop-up description of each with links to the original online.</p>
         <table class="layout">
             <tr>
-                <td class="blue">
+                <td class="grey">
                     <h3>Vocabularies</h3>
                     <p>Much of linked Data relies on <em>definitions</em>, indeed the <a href="https://en.wikipedia.org/wiki/Semantic_Web">Semantic Web</a>, which Linked Data is helping build, is predicated on strong definitions for web resources. Vocabularies, standardised in their structure and delivery according to Linked Data and Semantic Web principles provide online, look-up-able definitions for things which can be used much more easily and powerfully than older vocabulary tools such as (paper) dictionaries, tables on web pages or XML code lists.</p>
                     <p>Here are two Linked Data vocabulary systems currently in use in the Australian Federal government:</p>
@@ -180,7 +185,7 @@
                         <li>directory.gov.au in RDF - <em>coming soon!</em></li>
                     </ul>
                 </td>
-                <td class="blue">
+                <td class="grey">
                     <h3>Ontologies</h3>
                     <p>Ontologies are data models that express knowledge within a domain and are often more complex than vocabularies although vocabularies themselves <em>are</em> a form of ontology.</p>
                     <p>A great number of foundational, or fundamental, ontologies have been produced to cater for such broadly required concepts as time (<a href="https://www.w3.org/TR/owl-time/">TIME ontology</a>) and simple authoring information <a href="http://dublincore.org/documents/dc-rdf/">Dublin Core</a> and tracing changes to things over time (<a href="https://www.w3.org/TR/prov-o/">PROV-O, the provenance ontology</a>) this Linked Data WG has produced an ontology to define properties for datasets within the <a href="http://data.gov.au">data.gov.au</a> catalogue.</p>
