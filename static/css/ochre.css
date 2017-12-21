@@ -121,6 +121,10 @@ table.lined th {
     color: white;
 }
 
+div.grey {
+    background-color: #e4e4e4; padding:10px;
+}
+
 .white {
     vertical-align: top;
     background-color: white;
