@@ -204,3 +204,40 @@ button {
     font-size: 100%;
     font-family: Roboto,sans-serif;
 }
+
+code {
+    font-size: large;
+}
+
+header {
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+footer {
+    background: url("http://linked.data.gov.au/static/img/comms_footer_bg.svg") top left no-repeat;
+    background-color: #e4e4e4;
+    padding-top: 2em;
+    margin-top: 25px;
+}
+
+table.alternating {
+    width:100%;
+    border-collapse: collapse;
+}
+
+table.alternating th,
+table.alternating td {
+    padding: 5px;
+}
+
+table.alternating tr:nth-child(odd) {
+    background: #efefef;
+    border-top: 1px solid #D8D8D8;
+}
+
+table.alternating tr:nth-child(even) {
+    background: #ffffff;
+    border-top: 1px solid #D8D8D8;
+}
