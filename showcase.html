@@ -15,9 +15,9 @@
     <meta name="description" content="AGLDWG Linked Data showcase - datasets, models, systems" />
     <meta name="generator" content="Lovingly coded by hand" />
 
-    <link type="text/css" rel="stylesheet" href="static/css/ochre.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="style/css/ochre.css" media="all" />
 
-    <script src="static/js/jquery-3.2.1.min.js"></script>
+    <script src="style/js/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
             //select all the a tag with name equal to modal
@@ -32,7 +32,7 @@
                 var maskHeight = $(document).height();
                 var maskWidth = $(window).width();
 
-                //Set heigth and width to mask to fill up the whole screen
+                //Set height and width to mask to fill up the whole screen
                 $('#mask').css({'width':maskWidth,'height':maskHeight});
                 //transition effect
                 $('#mask').fadeIn(1000);
@@ -126,7 +126,7 @@
 <body>
     <header id="header" style="text-align:right; padding-top:10px;">
         <div style="width:150px; height:150px; float:left;">
-            <img src="static/img/agldwg-logo-ochre-150.png" alt="AGLDWG logo" />
+            <img src="style/img/agldwg-logo-ochre-150.png" alt="AGLDWG logo" />
         </div>
         <div id="nav">
             <a href="index.html">Home</a> |
@@ -313,7 +313,7 @@
     <div class="window" id="dialog-1">
         <div class="window-links"><a href="#" class="close">Close</a></div>
         <h3>Australian Governments' Interactive Functions Thesaurus (AGIFT)</h3>
-        <p style="text-align:center;"><a href="https://data.naa.gov.au/def/agift.html"><img src="static/img/agift.jpg" alt="AGIFT website screenshot" style="width:460px;" /></a></p>
+        <p style="text-align:center;"><a href="https://data.naa.gov.au/def/agift.html"><img src="style/img/agift.jpg" alt="AGIFT website screenshot" style="width:460px;" /></a></p>
         <p>AGIFT is a vocabulary delivered by the <a href="http://www.naa.gov.au/">National Archives of Australia</a> that lists functions performed by government. The web page delivering AGIFT is a system that allows for both human and machine-readable versions of the vocabulary formalised using the <a href="https://www.w3.org/TR/skos-primer/">SKOS</a> ontology.</p>
         <p>The system used is the commercial <a href="https://www.poolparty.biz/">PoolParty</a> product.</p>
     </div>
@@ -322,7 +322,7 @@
         <div class="window-links"><a href="#" class="close">Close</a></div>
         <h3>Australian National Data Service' Research Vocabularies Australia</h3>
         <p>The <a href="http://www.ands.org.au">ANDS</a> provides a vocabulary hosting service for Australian government and academic users</p>
-        <p style="text-align:center;"><a href="https://data.naa.gov.au/def/agift.html"><img src="static/img/rva.png" alt="ANDS' Research Vocabularies Australia portal" style="width:460px;" /></a></p>
+        <p style="text-align:center;"><a href="https://data.naa.gov.au/def/agift.html"><img src="style/img/rva.png" alt="ANDS' Research Vocabularies Australia portal" style="width:460px;" /></a></p>
         <p>A search for the word 'rock' yields both individual terms ("Concepts") within vocabularies about rocks and whole vocabularies about them.</p>
         <ul>
             <li><a href="https://vocabs.ands.org.au/search/#!/?p=1&publisher=Geoscience%20Australia">GA's vocabs in the RVA portal</a></li>
@@ -338,7 +338,7 @@
                     <td>
                         <p>The Linked Data WG uses an advanced web proxy, the <a href="https://www.seegrid.csiro.au/wiki/Siss/PIDService">PID Service</a> that allows for fine-grained and semi-non-technical management of long-lived URIs. We use a PID Service within the data.gov.au domain to manage PIDs made with a series of subdomains, such as <code>environment.data.gov.au</code>, <code>reference.data.gov.au</code> and others that accord with the AGLDWG's <a href="https://github.com/AGLDWG/TR/blob/master/guidelines/URI-Guidelines-for-publishing-linked-datasets-on-data.gov.au-latest.md">URI Guidelines</a> which indicates how to supply PIDs for use across government (tip: use PIDs associaeted with government <em>functions</em>, not organisations, as functions don't change, organisations do.</p>
                     </td>
-                    <td><img src="static/img/pid-svc.png" alt="Screenshot of the environment.data.gov.au PID Service" style="width:400px;" /></td>
+                    <td><img src="style/img/pid-svc.png" alt="Screenshot of the environment.data.gov.au PID Service" style="width:400px;" /></td>
                 </tr>
             </table>
         <p>Agencies with datasets in the <em>environment</em> domain of government functions, such as the <a href="http://www.bom.gov.au">Bureau of Meteolrology</a>, can put Linked Data datasets online and use the proxying functions of this PID Service to create persistent identifiers for the datasets and their subcomponents which resolve to them, regardless of where and how they are implemented under the hood.</p>
@@ -355,7 +355,7 @@
                     <p>The full catalogue ("Register" in Linked Data-speak) of all samples is available at <a href="http://pid.geoscience.gov.au/sample/">http://pid.geoscience.gov.au/sample/</a> and W3C <a href="https://www.w3.org/TR/dwbp/">Data on the Web Best Practices</a> are followed to allow for navigating the 2M samples.</p>
                 </td>
                 <td>
-                    <a href="http://pid.geoscience.gov.au/sample/AU239"><img src="static/img/sample-AU239.png" alt="GA's Samples Catalogue AU239" style="width:400px;" /></a>
+                    <a href="http://pid.geoscience.gov.au/sample/AU239"><img src="style/img/sample-AU239.png" alt="GA's Samples Catalogue AU239" style="width:400px;" /></a>
                 </td>
             </tr>
         </table>
@@ -379,7 +379,7 @@
                     <p>This ontology has the expressive power of the ISO's <a href="https://www.iso.org/standard/53798.html">19115 -- metadata for geographic information standard</a> but, in using Linked Data and Semantic Web tools rather than the older XML, it is far more powerful.</p>
                     <p><a href="http://reference.data.gov.au/def/ont/dataset">http://reference.data.gov.au/def/ont/dataset</a></p>
                 </td>
-                <td><a href="http://reference.data.gov.au/def/ont/dataset"><img src="static/img/dataset-ont.png" alt="The Dataset Ontology Landing Page in data.gov.au" style="width:400px;" /></a></td>
+                <td><a href="http://reference.data.gov.au/def/ont/dataset"><img src="style/img/dataset-ont.png" alt="The Dataset Ontology Landing Page in data.gov.au" style="width:400px;" /></a></td>
             </tr>
         </table>
     </div>
@@ -395,7 +395,7 @@
         <div class="window-links"><a href="#" class="close">Close</a></div>
         <h3>ACORN-SAT</h3>
         <h4>"Experimental Environmental Linked-data published by the Bureau of Meteorology"</h4>
-        <p style="text-align:center;"><a href="http://lab.environment.data.gov.au"><img src="static/img/acorn-sat.png" alt="ACORN-SAT homepage" style="width:460px;" /></a></p>
+        <p style="text-align:center;"><a href="http://lab.environment.data.gov.au"><img src="style/img/acorn-sat.png" alt="ACORN-SAT homepage" style="width:460px;" /></a></p>
         <p>The Bureau of Meteorology (<a href="http://www.bom.gov.au/">BOM</a>) in collaboration with the <a href="http://www.bom.gov.au/environment">National Plan for Environmental Information Initiative</a>, the Australian Government Information Management Office (<a href="http://www.agimo.gov.au/">AGIMO</a>) and the <a href="http://research.ict.csiro.au/research/labs/information-engineering">Information Engineering Laboratory</a> of the <a href="http://www.csiro.au">CSIRO</a> is providing experimental resources for Linked Data under <a href="http://lab.environment.data.gov.au/">lab.environment.data.gov.au</a>. The data published under this domain makes data available in a Linked Data fashion, and illustrates some of the capabilities that can be developed with Linked Data.</p>
         <p>Currently, the following environmental data sets are available as Linked Data:</p>
         <ul><li><a href="http://www.bom.gov.au/climate/change/acorn-sat/">ACORN-SAT</a></li></ul>
@@ -407,7 +407,7 @@
         <h3>FSDF's LINK graph</h3>
         <table>
             <tr>
-                <td><a href="http://link.fsdf.org.au"><img src="static/img/link.png" alt="The LINK" style="width:400px;" /></a></td>
+                <td><a href="http://link.fsdf.org.au"><img src="style/img/link.png" alt="The LINK" style="width:400px;" /></a></td>
                 <td>
                     <p>The LINK is the Australian Government's Foundational Spatial Data Framework initiative's online database of input data, agencies and so on that contribute to its themed datasets.</p>
                     <p>The LINK is presented via a Content Management System that makes all of its contents available via dynamic web pages that draw from a database. A graph exporter tool has been written to export that databases' content RDF data in accordance with the LINK's OWL ontology.</p>
@@ -426,7 +426,7 @@
         <h3>GA's Public Data Model Ontology</h3>
         <table>
             <tr>
-                <td><a href="http://pid.geoscience.gov.au/def/ont/ga/pdm"><img src="static/img/gapd.png" alt="The GA PDM" style="width:400px;" /></a></td>
+                <td><a href="http://pid.geoscience.gov.au/def/ont/ga/pdm"><img src="style/img/gapd.png" alt="The GA PDM" style="width:400px;" /></a></td>
                 <td style="text-align: left;">
                     <p>Geoscience Australia is moving to present all of its public online resources in accordance with a single ontology: the GA Public Data Ontology.</p>
                     <p>The ontology describes how GA's datasets, services, vocabularies, vocab terms, licenses, samples and all other resources online represented in Linked Data are linked. Using the ontology you can see that a <strong>Service</strong> <em>operatesOn</em> <strong>Dataset(s)</strong> and that the cardinality is 1+, i.e. every GA Service will indicate <em>at least one</em> Dataset.</p>
@@ -444,7 +444,7 @@
         <h3>The FSDF's LINK ontology</h3>
         <table>
             <tr>
-                <td><a href="http://link.fsdf.org.au"><img src="static/img/link.png" alt="The LINK" style="width:400px;" /></a></td>
+                <td><a href="http://link.fsdf.org.au"><img src="style/img/link.png" alt="The LINK" style="width:400px;" /></a></td>
                 <td style="text-align: left;">
                     <p>The Foundational Spatial Data Framework initiative's LINK system provides access to the input data, agencies, mandates and other items that make up the FSDF's themed datasets.</p>
                     <p>This ontology defines very precicely the items in the LINK and allows them to be expressed in RDF. The ontology mostly re-uses well-known ontologies, such as <a href="https://www.w3.org/TR/prov-o/">PROV</a> and <a href="https://www.w3.org/TR/vocab-dcat/">DCAT</a> with the belief that maximum reuse of existing ontologies leads to better understanding of concepts expressed.</p>
@@ -463,7 +463,7 @@
         <h3>Machine Readable Australian Curriculum</h3>
         <table>
             <tr>
-                <td><a href="http://rdf.australiancurriculum.edu.au"><img src="static/img/curriculum.png" alt="Machine Readable Australian Curriculum" style="width:400px;" /></a></td>
+                <td><a href="http://rdf.australiancurriculum.edu.au"><img src="style/img/curriculum.png" alt="Machine Readable Australian Curriculum" style="width:400px;" /></a></td>
                 <td style="text-align: left;">
                     <p>"On behalf of ACARA, Education Services Australia publishes a machine readable version of the Australian Curriculum. The Australian Curriculum is published in machine readable form, using the Resource Description Framework (RDF). This uses Semantic Web technologies for an extensible encoding of metadata about the curriculum, expressed through relations between URIs."</p>
                     <ul>
@@ -483,7 +483,7 @@
                     <p><a href="http://reference.data.gov.au/def/ont/agrif">The Australian Government Records Interoperability Framework (AGRIF)</a> is a system of related semantic ontologies that describe the structure, functions, and activities of the Australian Government, providing sufficient context for the effective use – including but not limited to management – of Australian Government information assets. It complies with the World Wide Web Consortium’s Web Ontology Language (OWL2) Recommendation and makes reference to other Recommendations and existing domain ontologies for archival and preservation processes.</p>
                     <p>This ontology is expected to form one of the pillars of Semantic Web interoperability between Australian government organisations.</p>
                 </td>
-                <td><a href="http://reference.data.gov.au/def/ont/agrif"><img src="static/img/agrif-small.png" alt="The AGRIF Ontology's Record class" style="width:400px;" /></a></td>
+                <td><a href="http://reference.data.gov.au/def/ont/agrif"><img src="style/img/agrif-small.png" alt="The AGRIF Ontology's Record class" style="width:400px;" /></a></td>
             </tr>
         </table>
     </div>
@@ -498,7 +498,7 @@
                     <p>Due to its specialised nature, this ontology is published using the <code>infrastructure</code> subdomain of <code>data.gov.au</code>, rather than the general <code>reference</code> subdomain where the Dataset ontology is published.</p>
                     <p><a href="http://infrastructure.data.gov.au/def/ont/eudm">http://infrastructure.data.gov.au/def/ont/eudm</a></p>
                 </td>
-                <td><a href="http://infrastructure.data.gov.au/def/ont/eudm"><img src="static/img/eudm.png" alt="The EUDM Ontology's class diagram" style="width:400px;" /></a></td>
+                <td><a href="http://infrastructure.data.gov.au/def/ont/eudm"><img src="style/img/eudm.png" alt="The EUDM Ontology's class diagram" style="width:400px;" /></a></td>
             </tr>
         </table>
     </div>

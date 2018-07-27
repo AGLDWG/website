@@ -45,7 +45,7 @@ p, li {
 }
 
 a {
-    color: rgb(153, 79, 0); /*#DE0000;*/
+    color: rgb(153, 79, 0); /*#994F00;*/
 }
 
 #nav {
@@ -216,7 +216,7 @@ header {
 }
 
 footer {
-    background: url("http://linked.data.gov.au/static/img/comms_footer_bg.svg") top left no-repeat;
+    background: url("http://linked.data.gov.au/style/img/comms_footer_bg.svg") top left no-repeat;
     background-color: #e4e4e4;
     padding-top: 2em;
     margin-top: 25px;
