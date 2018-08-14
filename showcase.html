@@ -340,7 +340,9 @@
                         <p>The Linked Data WG recently used an advanced web proxy, the <a href="https://www.seegrid.csiro.au/wiki/Siss/PIDService">PID Service</a>, but has  recently migrated its efforts in redirecting URLs to URL rewrite rules in <a href="https://httpd.apache.org/">Apache</a>. This migration allows for lower overhead in complexity and maintenance.</p>
                         <p>The PID URI Service is used within the data.gov.au domain to manage PIDs made with a series of subdomains, such as <code>environment.data.gov.au</code>, <code>reference.data.gov.au</code> and others that accord with the AGLDWG's <a href="https://github.com/AGLDWG/TR/blob/master/guidelines/URI-Guidelines-for-publishing-linked-datasets-on-data.gov.au-latest.md">URI Guidelines</a>, which indicates how to supply PIDs for use across government (tip: use PIDs associated with government <em>functions</em>, not organisations, as functions don't change, organisations do).</p>
                     </td>
-                    <td><img src="style/img/pid-svc.png" alt="Screenshot of the environment.data.gov.au PID Service" style="width:400px;" /></td>
+                    <td>
+                        <img src="style/img/mod_rewrite.gif" alt="Apache Rewrite Rules Example" style="width:400px;" />
+                    </td>
                 </tr>
             </table>
         <p>Agencies with datasets in the <em>environment</em> domain of government functions, such as the <a href="http://www.bom.gov.au">Bureau of Meteorology</a>, can put Linked Data datasets online and use the proxying functions of this PID URI Service to create persistent identifiers for the datasets and their subcomponents which resolve to them, regardless of where and how they are implemented under the hood.</p>
