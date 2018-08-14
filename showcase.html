@@ -332,18 +332,19 @@
 
     <div class="window" id="dialog-3">
         <div class="window-links"><a href="#" class="close">Close</a></div>
-        <h3>AGLDWG's Persistent ID Service</h3>
+        <h3>AGLDWG PID URI Service</h3>
         <p>One of the core tasks of Linked Data is to uniquely and usefully identify resources - information items - on the web. This is usually done with <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URI</a>s which are just a slight extension to web page URLs allowing for non-web page things to be linked to, e.g. vocabulary terms in machine-to-machine data formats.</p>
             <table>
                 <tr>
                     <td>
-                        <p>The Linked Data WG uses an advanced web proxy, the <a href="https://www.seegrid.csiro.au/wiki/Siss/PIDService">PID Service</a> that allows for fine-grained and semi-non-technical management of long-lived URIs. We use a PID Service within the data.gov.au domain to manage PIDs made with a series of subdomains, such as <code>environment.data.gov.au</code>, <code>reference.data.gov.au</code> and others that accord with the AGLDWG's <a href="https://github.com/AGLDWG/TR/blob/master/guidelines/URI-Guidelines-for-publishing-linked-datasets-on-data.gov.au-latest.md">URI Guidelines</a> which indicates how to supply PIDs for use across government (tip: use PIDs associated with government <em>functions</em>, not organisations, as functions don't change, organisations do.</p>
+                        <p>The Linked Data WG recently used an advanced web proxy, the <a href="https://www.seegrid.csiro.au/wiki/Siss/PIDService">PID Service</a>, but has  recently migrated its efforts in redirecting URLs to URL rewrite rules in <a href="https://httpd.apache.org/">Apache</a>. This migration allows for lower overhead in complexity and maintenance.</p>
+                        <p>The PID URI Service is used within the data.gov.au domain to manage PIDs made with a series of subdomains, such as <code>environment.data.gov.au</code>, <code>reference.data.gov.au</code> and others that accord with the AGLDWG's <a href="https://github.com/AGLDWG/TR/blob/master/guidelines/URI-Guidelines-for-publishing-linked-datasets-on-data.gov.au-latest.md">URI Guidelines</a>, which indicates how to supply PIDs for use across government (tip: use PIDs associated with government <em>functions</em>, not organisations, as functions don't change, organisations do).</p>
                     </td>
                     <td><img src="style/img/pid-svc.png" alt="Screenshot of the environment.data.gov.au PID Service" style="width:400px;" /></td>
                 </tr>
             </table>
-        <p>Agencies with datasets in the <em>environment</em> domain of government functions, such as the <a href="http://www.bom.gov.au">Bureau of Meteolrology</a>, can put Linked Data datasets online and use the proxying functions of this PID Service to create persistent identifiers for the datasets and their subcomponents which resolve to them, regardless of where and how they are implemented under the hood.</p>
-        <p>The PID URI <a href="http://environment.data.gov.au/def/op">http://environment.data.gov.au/def/op</a> proxies to CSIRO "Observable Properties" ontology which is a Linked Data resource about environmental properties. It's hosted on a CSIRO system but the PID makes it accessible via a nice, ordered, URI that won't change, even if CSIRO changes things (it can be redirected).</p>
+        <p>Agencies with datasets in the <em>environment</em> domain of government functions, such as the <a href="http://www.bom.gov.au">Bureau of Meteorology</a>, can put Linked Data datasets online and use the proxying functions of this PID URI Service to create persistent identifiers for the datasets and their subcomponents which resolve to them, regardless of where and how they are implemented under the hood.</p>
+        <p>The PID URI <a href="http://environment.data.gov.au/def/op">http://environment.data.gov.au/def/op</a> to CSIRO "Observable Properties" ontology which is a Linked Data resource about environmental properties. It's hosted on a CSIRO system but the PID makes it accessible via a nice, ordered, URI that won't change, even if CSIRO changes things (it can be redirected).</p>
     </div>
 
     <div class="window" id="dialog-4">
@@ -519,7 +520,7 @@
         </table>
 
         <ul style="text-align: left">
-            Some of its features:
+            <p><span style="font-weight:bold">Some of its features:</span></p>
             <li>Support for Markdown syntax in textual definitions</li>
             <li>Visualisation of ontologies with <a href="http://vowl.visualdataweb.org/webvowl.html">WebVOWL</a> integration</li>
         </ul>
