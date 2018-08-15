@@ -1,89 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-    <url>
-        <loc>http://linked.data.gov.au/</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>1.00</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/index.html</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/assistance.html</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/showcase.html</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/events.html</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/groups.html</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/howto.html</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/contact.html</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/join.html</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/prez/2017-08-15%20-%20Armin%20Haller%20Aust%20Comp%20Soc.pptx</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.64</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/prez/2017-08-03%20-%20AGLDWG%20AGM%20-%20All%20Presentations.pptx</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.64</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/prez/2017-06-30%20-%20Gov%20Open%20Data%20Com%20Forum%20-%20Two%20LD%20Examples.pptx</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.64</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/prez/2017-07-20%20-%20APLA%20Nicholas%20Car%20-%20Libraries%20and%20LD.pptx</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.64</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/prez/2017-04-05%20-%20WWW2017%20W3C%20Track%20Spatial%20Data%20on%20the%20Web%20-%20Nicholas%20Car.pptx</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.64</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/prez/2017-03-25%20-%20Haller-GOV22-Australian-Government-Data-Summit-v03.pptx</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.64</priority>
-    </url>
-    <url>
-        <loc>http://linked.data.gov.au/prez/2017-03-22%20-%20AGLDWG%20-%20Open%20Data%20Community%20Forum.pptx</loc>
-        <lastmod>2017-12-10T18:56:28+00:00</lastmod>
-        <priority>0.64</priority>
-    </url>
+
+<url>
+  <loc>http://www.linked.data.gov.au/</loc>
+  <lastmod>2018-08-15T19:24:07+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.linked.data.gov.au/governance</loc>
+  <lastmod>2018-08-15T19:24:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.linked.data.gov.au/assistance</loc>
+  <lastmod>2018-08-15T19:24:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.linked.data.gov.au/showcase</loc>
+  <lastmod>2018-08-15T19:24:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.linked.data.gov.au/events</loc>
+  <lastmod>2018-08-15T19:24:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.linked.data.gov.au/groups</loc>
+  <lastmod>2018-08-15T19:24:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.linked.data.gov.au/howto</loc>
+  <lastmod>2018-08-15T19:24:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.linked.data.gov.au/contact</loc>
+  <lastmod>2018-08-15T19:24:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.linked.data.gov.au/join</loc>
+  <lastmod>2018-08-15T19:24:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.linked.data.gov.au/files/MoU%20-%20DTA%20and%20AGLDWG%20signed.pdf</loc>
+  <lastmod>2018-07-25T05:47:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
