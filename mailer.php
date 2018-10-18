@@ -21,8 +21,8 @@ if(defined('STDIN')) {
 
         if (file_exists("secrets.json")) {
             $secrets = json_decode(file_get_contents("secrets.json"), true);
-            if (sendEmail($secrets['apiKey'], $secrets['secretKey'], 'nicholas.car@csiro.au', $their_email, '[agldwg] $which_form', 'this is a body')) {
-                header('Location: '/joined');
+            if (sendEmail($secrets['apiKey'], $secrets['secretKey'], $secrets['from'], $secrets['to'], '[agldwg] '. $which_form, 'Sign up ' . $their_email . ' to ' . $which_form . '.')) {
+                header('Location: /joined');
             } else {
                 http_response_code(500);
                 print("Email not sent");
