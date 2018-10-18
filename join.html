@@ -56,7 +56,7 @@
             </tr>
             <tr>
                 <td class="grey">
-                    <form id='form_stay' method='POST'>
+                    <form id='form_stay' method='POST' action="mailer.php">
                         <input type="hidden" name="which_form" class="required" value="stay" />
                         <input type="text" name="their_email" class="required email" placeholder="Your email address..."  />&nbsp;
                         <input type="submit" value="Stay in touch" style="height:26px; font-weight:bold;" />
@@ -64,7 +64,7 @@
                 </td>
                 <td></td>
                 <td class="grey">
-                    <form id='form_join' method='POST'>
+                    <form id='form_join' method='POST' action="mailer.php">
                         <input type="hidden" name="which_form" class="required" value="join" />
                         <input type="text" name="their_email" class="required email" placeholder="Your email address..."  />&nbsp;
                         <input type="submit" value="Join" style="height:26px; font-weight:bold;" />
@@ -89,45 +89,6 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="style/js/jquery.min.js"><\/script>')</script>
         <script src="//cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
-
-        <script>
-            $(function () {
-                $('form#form_stay').validate({
-                    messages: {},
-                    submitHandler: function (form) {
-                        $.ajax({
-                            url: "//formspree.io/brigette.metzler@humanservices.gov.au",
-                            method: "POST",
-                            data: $(form).serialize(),
-                            dataType: "json",
-                            success: function (data) {
-                                $("form#form_stay :input").prop("disabled", true);
-                                $('#thanks_stay').show();
-                            }
-                        });
-                        return false;
-                    }
-                });
-
-                $('form#form_join').validate({
-                    messages: {},
-                    submitHandler: function (form) {
-                        $.ajax({
-                            url: "//formspree.io/brigette.metzler@humanservices.gov.au",
-                            method: "POST",
-                            data: $(form).serialize(),
-                            dataType: "json",
-                            success: function (data) {
-                                $("form#form_join :input").prop("disabled", true);
-                                $('#thanks_join').show();
-                            }
-                        });
-                        return false;
-                    }
-                });
-            });
-        </script>
-
 	</div> <!-- main_content -->
 
 	<div id="footer">

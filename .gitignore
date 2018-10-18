@@ -4,3 +4,6 @@
 
 # Mac
 .DS_Store
+
+# MailJet secrets
+secrets.json
