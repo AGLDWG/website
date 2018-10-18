@@ -4,7 +4,7 @@ if(defined('STDIN')) {
     include("php-mailjet-v3-simple.class.php");
 
     $secrets = json_decode(file_get_contents("secrets.json"), true);
-    sendEmail($secrets['apiKey'], $secrets['secretKey'], 'nicholas.car@csiro.au', 'nicholas.car@csiro.au', 'fake subject2', 'this is a body');
+    sendEmail($secrets['apiKey'], $secrets['secretKey'], 'nicholas.car@csiro.au', 'nicholas.car@csiro.au', 'fake subject3', 'this is a body');
 
     print("Email sent\n");
 } else {
@@ -22,8 +22,7 @@ if(defined('STDIN')) {
         if (file_exists("secrets.json")) {
             $secrets = json_decode(file_get_contents("secrets.json"), true);
             if (sendEmail($secrets['apiKey'], $secrets['secretKey'], 'nicholas.car@csiro.au', $their_email, '[agldwg] $which_form', 'this is a body')) {
-                http_response_code(201);
-                print("Email sent");
+                header('Location: '/joined');
             } else {
                 http_response_code(500);
                 print("Email not sent");
