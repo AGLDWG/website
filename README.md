@@ -21,6 +21,6 @@ This website is maintained by the AGLDWG as a whole. Contact the group itself fo
 <brigette.metzler@humanservices.gov.au>  
 
 **Nicholas Car**  
-*Commonwealth Scientific and Industrial Research Organisation (CSIRO)*  
-<nicholas.car@csiro.au>  
+*Qld Department of Natural Resources, Energy & Mines*  
+<nicholas.car@surroundaustralia.com>  
 

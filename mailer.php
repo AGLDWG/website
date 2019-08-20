@@ -4,7 +4,7 @@ if(defined('STDIN')) {
     include("php-mailjet-v3-simple.class.php");
 
     $secrets = json_decode(file_get_contents("secrets.json"), true);
-    sendEmail($secrets['apiKey'], $secrets['secretKey'], 'nicholas.car@csiro.au', 'nicholas.car@csiro.au', 'fake subject3', 'this is a body');
+    sendEmail($secrets['apiKey'], $secrets['secretKey'], 'nicholas.car@surroundaustralia.com', 'nicholas.car@surroundaustralia.com', 'fake subject3', 'this is a body');
 
     print("Email sent\n");
 } else {
