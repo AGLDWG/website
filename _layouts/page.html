@@ -78,29 +78,25 @@
         }
 
         #footer_content {
+            display: grid;
+            grid-template-columns: 700px 1fr;
             width: 900px;
             margin: 0 auto;
             text-align: left;
             line-height: 2em;
+            font-size: smaller;
         }
 
         #footer_content a {
             color: #616161;
-            padding-bottom: 0.125em;
             border-bottom: 1px solid currentcolor;
             text-decoration: none;
         }
-
-        #license {
-            font-size: small;
-        }
-
 
         /* linked.data.gov.au additions */
         div.table {
             margin: 20px;
             text-align: center;
-
         }
 
         span.caption {
@@ -144,7 +140,9 @@
         }
 
         .grey {
-            background-color: #e4e4e4; padding:10px;
+            background-color: #e4e4e4; 
+            padding:10px;
+            margin-bottom: 10px;
         }
 
         .white {
@@ -285,14 +283,13 @@
 
 <div id="footer">
     <div id="footer_content">
-        <div id="license">
+        <div style="grid-column:1; align-self: end;">
             <img src="style/img/cc-by.png" alt="CC BY 4.0" width="88" height="31">
             This web page content is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
         </div>
-        <div style="float:right; width:49%; text-align:right;">
-
+        <div style="grid-column:2; align-self: end; text-align:right; ">
+            <a href="contact">Contact Us</a>
         </div>
-        <div style="clear:both;">&nbsp;</div>
     </div>
 </div><!-- footer -->
 </body>
