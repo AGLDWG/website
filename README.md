@@ -1,7 +1,16 @@
 # AGLDWG website
 This codebase contains the content of the website of the Australian Government Linked Data Working Group (AGLDWG) which is hosted online at <http://www.linked.data.gov.au>.
 
-The website, which contains only static HTML pages with some CSS and JavaScript styling, is delivered online via the AGLDWG's webserver. 
+#### Site publication
+The website is a [Jekyll](https://jekyllrb.com/) website, that is, it is a collection of static HTML files that are wrapped with a template in a pre-publication step. The resultant HTML pages are served up by [GitHub Pages](https://pages.github.com/) directly from this repository. The web address of the website, <http://www.linked.data.gov.au>, is pointed at the GitHub Pages-delivered version of this webisite; no other web server is used.
+
+##### Jekyll Commands
+##### Launch new site (one-time)
+`jekyll new . --force`
+
+##### Serve locally
+`bundle exec jekyll serve`
+
 
 ## License
 The contents of this repository are licensed for use under Creative Commons 4.0 International. See the [LICENSE deed](LICENSE) in this repository for details.
@@ -20,7 +29,9 @@ This website is maintained by the AGLDWG as a whole. Contact the group itself fo
 *Department of Human Services*  
 <brigette.metzler@humanservices.gov.au>  
 
-**Nicholas Car**  
+**Dr Nicholas Car**  
 *Qld Department of Natural Resources, Energy & Mines*  
 <nicholas.car@surroundaustralia.com>  
 
+**John Machin**  
+*Department of Finance*  
