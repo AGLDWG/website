@@ -6,8 +6,7 @@ permalink: /join
 
         <h1>Australian Government Linked Data Working Group</h1>
         <h2>Join</h2>
-        <p>Thanks for your interest in joining the Australian Government Linked Data Working Group! We appreciate your enthusiasm for Linked Data and look forward to hearing you introduce yourself to the group at a coming meeting.</p>
-        <p>Select from one or other or both of the Working Group's mailing lists to join using the form below.</p>
+        <p>To join the Working Group, just sign up to one, other or both of the mailing lists. We'll then be in touch with specific meeting details and hope to see/hear you soon!</p>
         <!--
         <p>There are two joining options:</p>
         <table style="border-collapse:collapse;">
@@ -62,10 +61,64 @@ permalink: /join
         <script src="//cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
         -->
 
+        <style>
+            form.contact {
+                display:grid; 
+                grid-template-rows: 50px 50px 50px 100px 100px 20px; 
+                grid-template-columns: 150px 300px;                            
+            }
+            p.note {
+                font-size:smaller; font-style: italic;
+            }
+        </style>
+        <div style="border: solid 1px rgb(133, 25, 2); padding: 0 30px 30px 30px;">
+            <h4>Sign up to the mailing lists</h4>
+            <form class="contact" action="https://formspree.io/mknjwrge" method="POST" >
+                <div style="grid-row: 1; grid-column: 1;">
+                    <label for="given_name">Given Name: </label>
+                </div>
+                <div style="grid-row: 1; grid-column: 2;">
+                    <input type="text" name="given_name" />
+                </div>
+    
+                <div style="grid-row: 2; grid-column: 1;">
+                    <label for="family_name">Family Name:</label>
+                </div>
+                <div style="grid-row: 2; grid-column: 2;">
+                    <input type="text" name="family_name" />
+                </div>
+    
+                <div style="grid-row: 3; grid-column: 1;">
+                    <label for="email">Your email:</label>
+                </div>
+                <div style="grid-row: 3; grid-column: 2;">
+                    <input type="email" name="email" style="width: 250px;" />
+                </div>
+    
+                <div style="grid-row: 4; grid-column: 1;">
+                    <label for="list">Which email list?:</label>
+                </div>
+                <div style="grid-row: 4; grid-column: 2;">
+                    <select name="list">
+                        <option id="comms">comms</option>
+                        <option id="working">working</option>
+                        <option id="both">both</option>
+                    </select>
+                    <p class="note">The 'comms' list is the general list for AGLDWG notifications. The 'working' list is for active contributors to Linked Data matters.</span>
+                </div>
 
-        <div id="formkeep-embed" data-formkeep-url="https://formkeep.com/p/149a1b1348481bb5dd3fb9a1ea0b72ed?embedded=1"></div>
+                <div style="grid-row: 5; grid-column: 1;">
+                    <label for="email">Your affiliation:</label>
+                </div>
+                <div style="grid-row: 5; grid-column: 2;">
+                    <input type="affiliation" name="affiliation" style="width: 250px;" />
+                    <p class="note">The government entity or company/NGO etc. you're part of. Can be 'none'!</span>
+                </div>
 
-        <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
-        <script type="text/javascript" src="https://formkeep-production-herokuapp-com.global.ssl.fastly.net/formkeep-embed.js"></script>
+                <!--<input type="hidden" name="_next" value="join-thanks" />-->
 
-        
+                <div style="grid-row: 6; grid-column: 2;">
+                    <input type="submit" value="Sign up!">
+                </div>                            
+            </form>            
+        </div>
