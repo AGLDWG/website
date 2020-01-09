@@ -20,7 +20,7 @@
             font-family: Roboto,sans-serif;
             font-weight: 300;
             color: rgb(133, 25, 2);
-            background: url("../img/comms_bg_grey.svg") top right no-repeat;
+            background: url("style/img/comms_bg_grey.svg") top right no-repeat;
             text-align: center;
         }
         #header {
@@ -68,29 +68,6 @@
 
         #nav {
             padding-top:60px;
-        }
-
-        #footer {
-            background: url("../img/comms_footer_bg.svg") top left no-repeat;
-            background-color: #e4e4e4;
-            padding-top: 2em;
-            margin-top: 25px;
-        }
-
-        #footer_content {
-            display: grid;
-            grid-template-columns: 700px 1fr;
-            width: 900px;
-            margin: 0 auto;
-            text-align: left;
-            line-height: 2em;
-            font-size: smaller;
-        }
-
-        #footer_content a {
-            color: #616161;
-            border-bottom: 1px solid currentcolor;
-            text-decoration: none;
         }
 
         /* linked.data.gov.au additions */
@@ -232,10 +209,25 @@
         }
 
         footer {
-            background: url("http://linked.data.gov.au/style/img/comms_footer_bg.svg") top left no-repeat;
+            background: url("style/img/comms_footer_bg.svg") top left no-repeat;
             background-color: #e4e4e4;
-            padding-top: 2em;
-            margin-top: 25px;
+            text-align:center;
+            padding: 2em 0 2em 0;
+        }
+        #footer-grid {
+            display: grid;
+            grid-template-columns: 80% 1fr;
+            margin: 0 auto;
+            text-align: left;
+            line-height: 2em;
+            font-size: smaller;
+            width: 900px;
+        }
+
+        #footer_content a {
+            color: #616161;
+            border-bottom: 1px solid currentcolor;
+            text-decoration: none;
         }
 
         table.alternating {
@@ -281,8 +273,8 @@
 {{ content }}
 </div> <!-- main_content -->
 
-<div id="footer">
-    <div id="footer_content">
+<footer>
+    <div id="footer-grid">
         <div style="grid-column:1; align-self: end;">
             <img src="style/img/cc-by.png" alt="CC BY 4.0" width="88" height="31">
             This web page content is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
@@ -291,6 +283,6 @@
             <a href="contact">Contact Us</a>
         </div>
     </div>
-</div><!-- footer -->
+</footer>
 </body>
 </html>
