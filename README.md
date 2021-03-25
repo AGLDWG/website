@@ -11,6 +11,12 @@ The website is a [Jekyll](https://jekyllrb.com/) website, that is, it is a colle
 ##### Serve locally
 `bundle exec jekyll serve`
 
+##### Update Jekyll
+
+_to fx dependencies:_
+`bundle update && bundle install`
+`bundle add webrick`
+
 
 ## License
 The contents of this repository are licensed for use under Creative Commons 4.0 International. See the [LICENSE deed](LICENSE) in this repository for details.
