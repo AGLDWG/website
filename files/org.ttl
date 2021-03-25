@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix irg: <https://linked.data.gov.au/def/irg#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+
+
+<https://linked.data.gov.au/org>
+    a irg:IRIRegister ;
+    dcterms:title "AGLDWG Register of Organisation IRIs" ;
+    dcterms:description "This register contains dataset IRIs for organisations registered with the Australian Government Linked Data Working Group. This RDF representation of it is incomplete but will shortly be delegated to a catalogue that will list all IRIs within the register." ;
+    reg:containedItemClass irg:RegisteredIRI ;
+.
