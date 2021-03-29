@@ -1,0 +1,35 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix irg: <https://linked.data.gov.au/def/irg#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+
+
+<https://linked.data.gov.au/reg/>
+    a reg:Register ;
+    dcterms:title "AGLDWG Main Register" ;
+    dcterms:description "This register contains subregisters used to manage different classes of IRIs: Definitional, dataset & Organisation IRIs." ;
+    reg:subregister 
+        <https://linked.data.gov.au/def> ,
+        <https://linked.data.gov.au/dataset> ,
+        <https://linked.data.gov.au/org> ;
+.
+
+<https://linked.data.gov.au/def>
+    a irg:IRIRegister ;
+    dcterms:title "AGLDWG Register of Definitions IRIs" ;
+    dcterms:description "This register contains definitional IRIs for ontologies, vocabularies etc. registered with the Australian Government Linked Data Working Group. This RDF representation of it is incomplete but will shortly be delegated to a catalogue that will list all IRIs within the register." ;
+    reg:containedItemClass irg:RegisteredIRI ;
+.
+
+<https://linked.data.gov.au/dataset>
+    a irg:IRIRegister ;
+    dcterms:title "AGLDWG Register of Dataset IRIs" ;
+    dcterms:description "This register contains dataset IRIs registered with the Australian Government Linked Data Working Group. This RDF representation of it is incomplete but will shortly be delegated to a catalogue that will list all IRIs within the register." ;
+    reg:containedItemClass irg:RegisteredIRI ;
+.
+
+<https://linked.data.gov.au/org>
+    a irg:IRIRegister ;
+    dcterms:title "AGLDWG Register of Organisation IRIs" ;
+    dcterms:description "This register contains dataset IRIs for organisations registered with the Australian Government Linked Data Working Group. This RDF representation of it is incomplete but will shortly be delegated to a catalogue that will list all IRIs within the register." ;
+    reg:containedItemClass irg:RegisteredIRI ;
+.
