@@ -1,29 +1,29 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix irg: <https://linked.data.gov.au/def/irg#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sdo: <https://schema.org/> .
 @prefix reg: <http://purl.org/linked-data/registry#> .
-
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au>
+    a void:Dataset ;
+    dcterms:title "AGLDWG Register of IRI Registers" ;
+    dcterms:description "A dataset of RDF data about IRIs registered with the Australian Goverment Linked Data Working Group and where they redirect to. See the Main Register within this dataset for details of the individual IRI Registers." ;
+    dcterms:modified "2021-03-29"^^xsd:date;
+    dcterms:publisher <https://linked.data.gov.au/org/agldwg> ;
+    dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:hasPart <https://linked.data.gov.au/reg/> ;
+.
+
+<https://linked.data.gov.au/org/agldwg>
+    a sdo:GovernmentOrganization ;
+    sdo:name "The Australian Goverment Linked Data Working Group" ;
+    sdo:alternateName "AGLDWG" ;
+    sdo:email "agldwg.cochairs@gmail.com"^^xsd:anyURI ;
+    sdo:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/reg/>
     a reg:Register ;
     dcterms:title "AGLDWG Register of IRI Registers" ;
-    dcterms:description "This register contains the Australian Government Linked Data Working Group's IRI Registers. Currently (March, 2021) there are 3 registers for Datasets, dEfinitions & Organisations" ;
-    reg:subregister 
-        <https://linked.data.gov.au/dataset> , 
-        <https://linked.data.gov.au/def> , 
-        <https://linked.data.gov.au/org> ;
 .
-
-<https://linked.data.gov.au/dataset>
-    a irg:IRIRegister ;
-    dcterms:title "AGLDWG Register of Dataset IRIs" ;
-.
-
-<https://linked.data.gov.au/def>
-    a irg:IRIRegister ;
-    dcterms:title "AGLDWG Register of Definitions IRIs" ;
-.
-
-<https://linked.data.gov.au/org> 
-    a irg:IRIRegister ;
-    dcterms:title "AGLDWG Register of Organisation IRIs" ;
-.    
