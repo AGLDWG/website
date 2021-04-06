@@ -10,6 +10,7 @@
     dcterms:title "AGLDWG Register of IRI Registers" ;
     dcterms:description "A dataset of RDF data about IRIs registered with the Australian Goverment Linked Data Working Group and where they redirect to. See the Main Register within this dataset for details of the individual IRI Registers." ;
     dcterms:modified "2021-03-29"^^xsd:date;
+    dcterms:creator <https://linked.data.gov.au/org/agldwg> ;
     dcterms:publisher <https://linked.data.gov.au/org/agldwg> ;
     dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
     dcterms:hasPart <https://linked.data.gov.au/reg/> ;

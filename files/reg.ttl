@@ -7,6 +7,8 @@
     a reg:Register ;
     dcterms:title "AGLDWG Register of IRI Registers" ;
     dcterms:description "This register contains the Australian Government Linked Data Working Group's IRI Registers. Currently (March, 2021) there are 3 registers for Datasets, Definitions & Organisations" ;
+    dcterms:creator <https://linked.data.gov.au/org/agldwg> ;
+    dcterms:publisher <https://linked.data.gov.au/org/agldwg> ;
     reg:subregister 
         <https://linked.data.gov.au/dataset> , 
         <https://linked.data.gov.au/def> , 

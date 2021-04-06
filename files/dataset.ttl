@@ -7,5 +7,7 @@
     a irg:IRIRegister ;
     dcterms:title "AGLDWG Register of Dataset IRIs" ;
     dcterms:description "This register contains dataset IRIs registered with the Australian Government Linked Data Working Group. This RDF representation of it is incomplete but will shortly be delegated to a catalogue that will list all IRIs within the register." ;
+    dcterms:creator <https://linked.data.gov.au/org/agldwg> ;
+    dcterms:publisher <https://linked.data.gov.au/org/agldwg> ;
     reg:containedItemClass irg:RegisteredIRI ;
 .
