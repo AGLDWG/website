@@ -1,0 +1,19 @@
+---
+title: Non-resolving
+permalink: /nonresolving.txt
+---
+NON-RESOLVING PID
+
+The Australian Government Linked Data Working Group (https://www.linked.data.gov.au>) Persistent Identifier (PID) that you attempted to follow is a PID but does not resolve!
+
+The PID remains known to the AGLDWG and may be ligitemately in use in data identifying something, but it does not resolve to a publicly available web resource.
+
+There are several reasons as to why this may have occured:
+
+* The system delivering public data about the resource is dead</li>
+* The resource has no <em>public</em> information. It may have private (non-public) information that only resolves on a closed network</li>
+* The PID's delivering system is not yet functional</li>
+
+For more information, please contact the PID owner. If you don't know who that is, browse the AGLDWG's catalogue fo PIDs and look for the PID namespace to find the details. If you are seeing this page, there must be an entry in that cataloguf for the PID's namespace:
+
+* https://catalogue.linked.data.gov.au

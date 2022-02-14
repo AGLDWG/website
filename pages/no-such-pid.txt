@@ -1,0 +1,10 @@
+---
+title: Missing
+permalink: /no-such-pid.txt
+---
+
+NO SUCH PID 
+
+See the AGLDWG's catalogue of PIDs to know what does exist:
+
+* https://catalogue.linked.data.gov.au
