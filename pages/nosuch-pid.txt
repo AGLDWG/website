@@ -1,6 +1,6 @@
 ---
 title: Missing
-permalink: /no-such.txt
+permalink: /nosuch.txt
 ---
 
 NO SUCH PID 
