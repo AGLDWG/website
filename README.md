@@ -6,16 +6,16 @@ The website is a [Jekyll](https://jekyllrb.com/) website, that is, it is a colle
 
 ##### Jekyll Commands
 ##### Launch new site (one-time)
-`jekyll new . --force`
+jekyll new . --force
 
 ##### Serve locally
-`bundle exec jekyll serve`
+bundle exec jekyll serve
 
 ##### Update Jekyll
 
 _to fx dependencies:_
-`bundle update && bundle install`
-`bundle add webrick`
+bundle update && bundle install
+bundle add webrick
 
 
 ## License
