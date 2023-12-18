@@ -25,20 +25,16 @@ The contents of this repository are licensed for use under Creative Commons 4.0 
 ## Contacts
 This website is maintained by the AGLDWG as a whole. Contact the group itself for any issues.
 
-##### Co-chairs of the AGLDWG
-
-**Dr Armin Haller**  
-*Australian National University*  
-<armin.haller@anu.edu.au>  
-
-**Brigette Metzler**  
-*Department of Human Services*  
-<brigette.metzler@humanservices.gov.au>  
+##### Co-chairs of the AGLDWG 
 
 **Dr Nicholas Car**  
-*Qld Department of Natural Resources, Energy & Mines*  
-<nicholas.car@surroundaustralia.com>  
+*Australian National University & Department of Climate Change, Energy, the Environment & Water*  
+<nicholas.car@anu.edu.au>  
 
 **John Machin**  
 *Department of Finance*  
 <john.machin@finance.gov.au> 
+
+**Dr Terhi Nurmikko-Fuller**  
+*Australian National University*  
+<terhi.nurmikko-fuller@anu.edu.au> 
