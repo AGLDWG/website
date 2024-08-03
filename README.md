@@ -32,9 +32,13 @@ This website is maintained by the AGLDWG as a whole. Contact the group itself fo
 <nicholas.car@anu.edu.au>  
 
 **John Machin**  
-*Department of Finance*  
-<john.machin@finance.gov.au> 
+*Department of Home Affairs*  
+<john.machin@homeaffairs.gov.au> 
 
 **Dr Terhi Nurmikko-Fuller**  
 *Australian National University*  
 <terhi.nurmikko-fuller@anu.edu.au> 
+
+**Andrew Fitzgerald**  
+*Department of Finance*  
+<andrew.fitzgerald@finance.gov.au> 
