@@ -32,8 +32,7 @@ This website is maintained by the AGLDWG as a whole. Contact the group itself fo
 <nicholas.car@anu.edu.au>  
 
 **John Machin**  
-*Department of Home Affairs*  
-<john.machin@homeaffairs.gov.au> 
+*Australian Government*  
 
 **Dr Terhi Nurmikko-Fuller**  
 *Australian National University*  
