@@ -1,12 +1,3 @@
-# PyCharm
-.idea/
-
-# Mac
-.DS_Store
-
-# MailJet secrets
-secrets.json
-
 _site
 .sass-cache
 .jekyll-cache

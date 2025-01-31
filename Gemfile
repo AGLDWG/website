@@ -7,7 +7,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.0.0"
+gem "jekyll", "~> 4.0.1"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.5"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -29,4 +29,10 @@ end
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 
-gem "webrick", "~> 1.7"
+gem "bigdecimal", "~> 3.1"
+
+gem "csv", "~> 3.3"
+
+gem "base64", "~> 0.2.0"
+
+gem "webrick", "~> 1.9"

@@ -13,9 +13,15 @@ bundle exec jekyll serve
 
 ##### Update Jekyll
 
-_to fx dependencies:_
-bundle update && bundle install
+_make sure rbenv is installed..._
+```
+rbenv install 3.4.1
+rbenv global 3.4.1
+gem install jekyll
+gem update --system 3.6.3
+bundle install
 bundle add webrick
+``` 
 
 
 ## License
