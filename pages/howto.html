@@ -6,84 +6,105 @@ permalink: /howto
 
         <h1>Australian Government Linked Data Working Group</h1>
         <h2>How To</h2>
-        <p>The AGLDWG can assist Australian governments with some Linked Data-related tasks. At the moment, the task that is most requested is helping organisations publish <a href="showcase">ontologies</a>.</p>
-
+        <p>The AGLDWG can assist Australian governments with some Linked Data-related tasks - see <a href="assistance">Assistance</a>. Additionally, we have quite a few established ways of working that Linked Data users can follow to complete some straightforward Linked Data and Persistent Identifier-related tasks. Here are some.</p>
         <h3>How to publish an ontology</h3>
         <h4>Suitability</h4>
         <p>The AGLDWG is keen to assist government organisations publish Semantic Web/Linked Data ontologies for any purposes they see fit within the realm of government business.</p>
+        <p>Usually this will involve use of the <code>linked.data.gov.au</code> persistent identifier namespace that we support - see our <a href="guidelines">URI Guidelines</a>.</p>
         <h4>Examples</h4>
-        <p>To date we have published some big, and some small, ontologies, such as:</p>
+        <p>Here are some big and small ontologies developed by a range of people that core Working Group members have assisted the publication of:</p>
         <ul>
             <li>
-                <a href="http://reference.data.gov.au/def/ont/agrif">The AGRIF Ontology</a>
+                <a href="https://linked.data.gov.au/def/abis">Australian Biodiversity Information Standard</a>
                 <ul>
-                    <li>an ontology published by the Department of Finance for whole-of-government record keeping</li>
+                    <li>a large national standard ontology for the exchange of biodiversity information in Australia</li>
                 </ul>
             </li>
             <li>
-                <a href="http://reference.data.gov.au/def/ont/dataset">The Dataset Ontology</a>
+                <a href="https://linked.data.gov.au/def/smurf">The SMURF Ontology</a>
                 <ul>
-                    <li>an ontology published by the AGLDWG itself for describing datasets in catalogues such as <a href="http://data.gov.au">data.gov.au</a> using Semantic Web terms</li>
+                    <li>a smaller ontology very recently (late 2025) developed by <a href="https://www.rmit.edu.au/">RMIT University</a> to assist with the linking of existing spatial data ontologies together</li>
+                    <li>published in early 2026</li>
                 </ul>
             </li>
             <li>
-                <a href="http://infrastructure.data.gov.au/def/ont/edum">The Energy Use Dataset Model (EUDM) ontology</a>
+                <a href="https://linked.data.gov.au/def/agrif">The Australian Government Records Interoperability Framework (AGRIF) ontology</a>
                 <ul>
-                    <li>an draft ontology published by CSIRO for describing specialised energy-related Datasets. A specialised version of the Dataset Ontology</li>
+                    <li>a middle-sized ontology published by the Department of Finance originally in 2017 for whole-of-government record keeping</li>
                 </ul>
             </li>
         </ul>
+        <p>These ontologies were created in very different ways and are delivered online using different systems, but they did share common steps in getting to publication that the AGLDWG assisted with which are listed below.
+        </p>
         <h4>Process</h4>
-        <p>We suggest this general process if you wish to publish an ontology to be used for Australian Government data, which means practically publishing it using some part of the data.gov.au domain:</p>
+        <p>We suggest this general process if you wish to publish an ontology to be used for Australian Government data:</p>
         <ol>
             <li>
-                <strong>Arrange</strong> suitable URI namespaces for your ontology
-                <ul>
-                    <li>Ontologies will likely need several URIs.
-						<ul>
-							<li>A <code>/def/</code> URI (like <a href="http://reference.data.gov.au/def/ont/agrif">http://reference.data.gov.au<strong>/def/</strong>ont/agrif</a>) which is the "home" of the ontology; this will usually also be the base URI for the new classes and properties on the ontology</li>
-							<li>
-								one or more URIs denoting lists or vocabularies of things required when the ontology is used, but which are maintained on a different schedule
-								<ul>
-									<li>note that these URIs are different again from the addresses where datasets are published</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-                    <li>
-						For example:
-						<ul>
-							<li>The EUDM ontology is defined at <a href="http://infrastructure.data.gov.au/def/ont/edum">http://infrastructure.data.gov.au/def/ont/edum</a></li>
-							<li>The EUDM things - datasets - will be listed at <a href="http://infrastructure.data.gov.au/dataset/eudm/">http://infrastructure.data.gov.au/dataset/eudm/</a> <em>(not yet working)</em>, <a href="http://transport.data.gov.au/dataset/eudm/">http://transport.data.gov.au/dataset/eudm/</a> <em>(not yet working)</em> and potentially elsewhere too.</li>
-						</ul>
-					</li>
-                    <li><em>The AGLDWG will help find appropriate URIs for your ontology and then implement the technical arrangements for them</em></li>
-                </ul>
-            </li>
-            <li>
-                <strong>Design</strong> your ontology
+                <strong>Design</strong>: make your ontology
                 <ul>
                     <li>You will have to design this yourself! We can assist with recommending textbooks, people and tools, just ask</li>
                     <li>We recommend using a desktop ontology builder tool to perform your modelling, such as <a href="https://protege.stanford.edu/">Protégé</a>. It will produce an ontology document in an RDF document</li>
-                    <li>You will need to use the URI assigned to the ontology (above) in the ontology builder</li>
+                    <li>At this stage, you could use any made-up namespaces for new ontology elements, perhaps <code>http://example.com/</code> which is a well-known testing IRI.</li>
                 </ul>
             </li>
             <li>
-                <strong>Present</strong> your ontology
+                <strong>Identify</strong>: arrange a suitable IRI namespace
                 <ul>
-                    <li>An ontology must, at least, be delivered in an RDF file (in rdf/xml, text/turtle or another RDF format). However it is good practice and a requirement of the  AGLDWG to also provide a human-readable version of the ontology to document it (HTML).</li>
-                    <li>The latter can be generated from ontology files using a range of tools such as <a href="http://www.essepuntato.it/lode">LODE</a>.</li>
-                    <li>The HTML page for the ontology will be provided to a web-browser requesting the ontology's persistent address: e.g. <a href="http://reference.data.gov.au/def/ont/dataset">http://reference.data.gov.au/def/ont/dataset</a></li>
-                    <li>We suggest including a diagram of the ontology's main classes and relationships.These have to be prepared separately as most tools won't do it automatically. You can use CMap or PowerPoint (which is used for the <a href="http://infrastructure.data.gov.au/def/ont/eudm">EUDM ontology</a>).</li>
-                    <li>See the "make_html.txt" file in the <a href="https://github.com/AGLDWG/agrif-ont">AGRIF ontology's code repository</a> for a full explanation of a process you can emulate</li>
+                    <li>The AGLDWG supports the use of <code>linked.data.gov.au</code> for the creation of long-term persistent ontology identifiers and namespaces.</li>
+                    <li>Ontologies are likely to be created within the <code>def/</code> register of <code>linked.data.gov.au</code></li>
+                    <li>You will need a sensible identifier part for your ontology within <code>def/</code>. For the above, examples, all three use acronyms, for example the PID for <em>Australian Biodiversity Information Standard</em> is <code><a href="https://linked.data.gov.au/def/abis">https://linked.data.gov.au/def/abis</a></code> but you may choose other methods to create a PID</li>
+                    <li>See our <a href="guidelines">URI Guidelines</a> for all the particulars.</li>
+                    <li>The WG will assist with all parts of this.</li>
                 </ul>
             </li>
             <li>
-                <strong>Deliver</strong> your ontology
+                <strong>Present</strong>: make human-readable forms
                 <ul>
-                    <li>The AGLDWG can host simple ontologies easily for you on our web server, as we host the three examples above</li>
-                    <li>You may choose to host your ontology elsewhere, in which case you will just need to arrange where the AGLDWG points the assigned URIs too</li>
-                    <li>The AGLDWG will retain a copy of the ontology, even if you host it elsewhere as a fall-back to ensure all URIs minted can always point somewhere</li>
+                    <li>An ontology must, at least, be delivered in an RDF file (in rdf/xml, text/turtle or another RDF format). However, it is good practice and a requirement of the AGLDWG to also provide a human-readable version of the ontology to document it, usually a web page (HTML).</li>
+                    <li>The latter can be generated from ontology files using a range of tools such as <a href="http://www.essepuntato.it/lode">LODE</a> or <a href="https://tools.kurrawong.ai/pylode">pyLODE</a>. It may also be delivered live, our of a Linked Data documentation application.</li>
+                    <li>The AGRIF and SMURF examples above used pyLODE to make static HTML</li>
+                    <li>We suggest including a diagram of the ontology's main classes and relationships. These may have to be prepared separately as tools like pyLODE won't make them it automatically, but they really help with ontology understanding.</li>
+                    <li>Tools like <a href="https://github.com/VisualDataWeb/WebVOWL">WebVOWL</a> can automatically make ontology diagrams, but (some of us at least!) think that hand-made ontology diagrams are best.</li>
+                    <li>See ABIS' many diagrams in the examples above</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Deliver</strong>: put online
+                <ul>
+                    <li>Once a human-readable form of the ontology has been made, it will need to be delivered online so it can be read.
+                      <ul>
+                        <li>The SMURF ontology above used pyLODE to generate an HTML file and then hosted it and the RDF file in GitHub at <a href="https://github.com/rmit-gkl/SMURF/">https://github.com/rmit-gkl/SMURF/</a>, delivering the web page at <a href="https://rmit-gkl.github.io/SMURF/smurf.html">https://rmit-gkl.github.io/SMURF/smurf.html</a></li>
+                        <li>ABIS above uses a powerful documentation system called <a href="https://asciidoctor.org/">ASCIIDoctor</a> to generate web pages from text files and images, i.e. not automatically from ontology source data. But it is also delivered online as a web page using GitHub Pages: <a href="https://github.com/AusBIGG/abis/">AusBIGG's ABIS respository</a>.</li>
+                      </ul>
+                    </li>
+                    <li>The AGLDWG can host simple ontologies easily for you in our GitHub account. We host the AGRIF example above.</li>
                 </ul>
             </li>
         </ol>
+        <!--
+        <h3>How to publish a vocabulary</h3>
+        <p>While you <em>can</em> publish a vocabulary similarly to an ontology, as above, there are other ways.</p>
+        <h4>Examples</h4>
+        <ul>
+          <li>
+            <a href="https://pid.geoscience.gov.au/def/voc/ga/BoreholePurpose">Geoscience Australia's <em>Borehole Purpose</em> vocabulary</a></li>
+            <ul>
+              <li>hosted by GA on a dedicated vocabulary server</li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://linked.data.gov.au/def/reg-statuses">AGLDWG's <em>Registry Status</em> vocabulary</a>
+            <ul>Hosted like a static ontology: using a simple GitHub Pages-based website with hand-made web pages</ul>
+          </li>
+          <li>
+            <a href="https://linked.data.gov.au/def/addr-part-types">ICSM's <em>Address Part Types</em> vocabulary</a>
+            <ul>
+              <li>also hosted on a vocabulary server</li>
+            </ul>
+          </li>
+        </ul>
+        <h4>Process</h4>
+        <ol>
+          <li><em>Design</em>: make your vocabulary</li>
+        </ol>
+        -->
