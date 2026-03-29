@@ -6,10 +6,14 @@ The website is a [Jekyll](https://jekyllrb.com/) website, that is, it is a colle
 
 ##### Jekyll Commands
 ##### Launch new site (one-time)
+```
 jekyll new . --force
+```
 
 ##### Serve locally
+```
 bundle exec jekyll serve
+```
 
 ##### Update Jekyll
 
@@ -47,3 +51,7 @@ This website is maintained by the AGLDWG as a whole. Contact the group itself fo
 **Andrew Fitzgerald**  
 *Department of Finance*  
 <andrew.fitzgerald@finance.gov.au> 
+
+**Alastair Paton**  
+*Independent*  
+<taxles@bigpond.com> 
