@@ -31,20 +31,22 @@ Highlights for 2026 are:
 Here are some presentations about Linked Data given by members of this
 group and other Linked Data experts
 
-- 2025 December 4 **Presentation**: AGM Monthly Meetings Presentation
+- 2025 December 4 **Presentation**: Monthly Meeting
   - [Slides](prez/2025-12-04%20-%20Alastair%20Paton%20-%20A%20Linked%20Data%20View%20of%20Australia.pdf)
     - **Presenter**: Alastair Paton
     - **About**: A Linked Data View of Australia
-- 2025 November 26 **Presentation**: Data Management Association of
-  Australia AGM
+- 2025 November 26 **Presentation**: Data Management Association of Australia AGM
   - [Slides](prez/2025-11-26%20-%20Nicholas%20Car%20-%20DAMA%20-%20SemWeb%20Data%20Integration%20for%20Aust.pdf)
     - **Presenter**: Nicholas Car
     - **About**: Semantic Web Data Integration for Australia
-- 2025 April 10 **Presentation**: AGM Monthly Meetings Presentation
+- 2025 August 07 **Event**: AGM Project Presentations
+    - **Presenter**: Multiple WG members
+    - **About**: 2025 Linked Data Projects by WG members
+- 2025 April 10 **Presentation**: Monthly Meeting
   - [Slides](prez/2025-04-10%20-%20AGLDWG%20PID%20Register%20Intro.pdf)
     - **Presenter**: Nicholas Car
     - **About**: The proposed new PID Catalogue system
-- 2024 Nov 7 **Presentation**: AGM Monthly Meetings Presentation
+- 2024 Nov 7 **Presentation**: Monthly Meeting
   - [Projects Slides](prez/2024-11-07%20-%20Alastair%20Paton%20-%20Ontology%20Mapping%20-%20to%20the%20WG.pdf)
     - **Presenter**: Alastair Paton
     - **About**: Ontology Mapping
@@ -52,7 +54,7 @@ group and other Linked Data experts
   - [Projects Slideshow](prez/2022-08-04%20-%20AGM2022%20-%20Project%20Presentations.pdf)
     - **Presenter**: Multiple WG members
     - **About**: 2022 Linked Data Projects by WG members
-- 2022 Jun 2 **Event**: Monthly Meeting Presentation
+- 2022 Jun 2 **Event**: Monthly Meeting
   - [ANSIS vocabs](prez/2022-06-02%20-%20Cox%20-%20ANSIS-vocabs.pptx)
     - **Presenter**: Simon Cox
     - **About**: Semantic Web use within Australia's National Soil
