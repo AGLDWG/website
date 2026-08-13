@@ -31,6 +31,10 @@ Highlights for 2026 are:
 Here are some presentations about Linked Data given by members of this
 group and other Linked Data experts
 
+- 2026 August 13 **Event**: AGM Project Presentations
+    - [Slides](prez/2026-07-13%20-%20AGLDWG%20AGM%20Projects.pptx)
+    - **Presenter**: Multiple WG members
+    - **About**: 2026 Linked Data Projects by WG members
 - 2025 December 4 **Presentation**: Monthly Meeting
   - [Slides](prez/2025-12-04%20-%20Alastair%20Paton%20-%20A%20Linked%20Data%20View%20of%20Australia.pdf)
     - **Presenter**: Alastair Paton
